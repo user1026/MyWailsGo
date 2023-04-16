@@ -26,6 +26,10 @@ func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
 }
 
-func (a *App) GetCount(x int) int {
-	return x
+func (a *App) GetExcelData() {
+
+}
+
+func openFile(data ...interface{}) {
+
 }
