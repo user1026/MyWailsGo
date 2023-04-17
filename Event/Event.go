@@ -1,8 +1,8 @@
 package Event
 
 import (
+	"changeme/Global"
 	"context"
-	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
 type Event struct {
@@ -14,10 +14,10 @@ func NewEventList() *Event {
 }
 func (e *Event) Startup(ctx context.Context) {
 	e.ctx = ctx
-	runtime.EventsOn(e.ctx, "openFile", openFile)
+	Global.Global_ConText = &ctx
 }
 func (e *Event) GetEvent(data ...interface{}) {
-	runtime.EventsEmit(e.ctx, "openFile", "123123")
+
 }
 func openFile(data ...interface{}) {
 

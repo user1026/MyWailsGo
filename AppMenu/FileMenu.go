@@ -1,8 +1,10 @@
 package AppMenu
 
 import (
+	"changeme/Global"
 	"github.com/wailsapp/wails/v2/pkg/menu"
 	"github.com/wailsapp/wails/v2/pkg/menu/keys"
+	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
 func AddFileMnuList(menu *menu.Menu) {
@@ -11,5 +13,5 @@ func AddFileMnuList(menu *menu.Menu) {
 }
 
 func openFile(_ *menu.CallbackData) {
-
+	runtime.EventsEmit(*Global.Global_ConText, "openFile", "123")
 }
