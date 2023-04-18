@@ -18,7 +18,7 @@ var assets embed.FS
 func main() {
 	// Create an instance of the app structure
 	app := NewApp()
-	e := Event.NewEventList()
+	var event = Event.EventList
 	// Create application with options
 	err := wails.Run(&options.App{
 		//Title:  "MyWailsGo",
@@ -29,7 +29,7 @@ func main() {
 		},
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
 		OnStartup:        app.startup,
-		OnDomReady:       e.Startup,
+		OnDomReady:       event.SetContext,
 		Menu:             AppMenu.AllMenuList(),
 		Bind: []interface{}{
 			app,

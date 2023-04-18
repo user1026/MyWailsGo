@@ -1,24 +1,23 @@
 package Event
 
 import (
-	"changeme/Global"
 	"context"
+	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
 type Event struct {
 	ctx context.Context
 }
 
-func NewEventList() *Event {
-	return &Event{}
+func (event *Event) SetContext(ctx context.Context) {
+	event.ctx = ctx
 }
-func (e *Event) Startup(ctx context.Context) {
-	e.ctx = ctx
-	Global.Global_ConText = &ctx
+func (event *Event) JsToGo(EventName string, callBack func(data ...interface{})) {
+	runtime.EventsOn(event.ctx, EventName, callBack)
 }
-func (e *Event) GetEvent(data ...interface{}) {
+func (event *Event) GotoJs(EventName string, data ...interface{}) {
 
+	runtime.EventsEmit(event.ctx, EventName, data)
 }
-func openFile(data ...interface{}) {
 
-}
+var EventList = new(Event)
