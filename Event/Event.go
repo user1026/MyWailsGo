@@ -16,8 +16,7 @@ func (event *Event) JsToGo(EventName string, callBack func(data ...interface{}))
 	runtime.EventsOn(event.ctx, EventName, callBack)
 }
 func (event *Event) GotoJs(EventName string, data ...interface{}) {
-
-	runtime.EventsEmit(event.ctx, EventName, data)
+	runtime.EventsEmit(event.ctx, EventName, data...)
 }
 
 var EventList = new(Event)
