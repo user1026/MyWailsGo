@@ -26,7 +26,6 @@ func openFile(_ *menu.CallbackData) {
 		return
 	}
 	file, openErr := excelize.OpenFile(fileName)
-
 	if Global.ErrorDialog(openErr, "读取文件时发生错误") {
 		return
 	}
