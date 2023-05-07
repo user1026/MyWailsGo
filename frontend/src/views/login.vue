@@ -1,7 +1,6 @@
 <template>
      <el-dialog
     v-model="isShow"
-   
     width="30%"
     center
     :show-close="false"

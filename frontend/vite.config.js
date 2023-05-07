@@ -30,5 +30,6 @@ export default defineConfig({
     "process.env": {
       "BASE_URL": "http://localhost:9000"
     }
-  }
+  },
+  server:{ host: '127.0.0.1', port: 7000 }
 })
