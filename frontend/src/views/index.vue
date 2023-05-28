@@ -48,6 +48,7 @@
 </template>
 <script setup>
 import { ref, reactive, onMounted } from "vue";
+import {GetCpuInfo} from "../../wailsjs/go/main/App.js"
 const leftSpan = ref(4);
 const rightSpan = ref(20);
 const isCollapse = ref(false);
@@ -60,6 +61,7 @@ const t = () => {
 };
 onMounted(()=>{
     leftWidth.value=leftElMenu.width+"px"
+    GetCpuInfo().then(res=>{console.log(res)})
 })
 const changeCollapse = () => {
   isCollapse.value = !isCollapse.value;

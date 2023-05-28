@@ -4,6 +4,7 @@ import (
 	"changeme/Global"
 	"context"
 	"fmt"
+	"github.com/shirou/gopsutil/cpu"
 )
 
 // App struct
@@ -28,7 +29,15 @@ func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
 }
 
-func (a *App) GetExcelData() {
+func (a *App) GetCpuInfo() []cpu.InfoStat {
+	cpuInfo, _ := cpu.Info()
+	fmt.Println(cpuInfo)
+	return cpuInfo
+}
+func (a *App) GetMemInfo() {
+
+}
+func (a *App) GetAllInfo() {
 
 }
 
