@@ -14,6 +14,10 @@ export function GetMemInfo() {
   return window['go']['main']['App']['GetMemInfo']();
 }
 
+export function GetUsingCpuInfo() {
+  return window['go']['main']['App']['GetUsingCpuInfo']();
+}
+
 export function Greet(arg1) {
   return window['go']['main']['App']['Greet'](arg1);
 }

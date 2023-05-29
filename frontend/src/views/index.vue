@@ -38,6 +38,7 @@
         <el-main>
           <div id="right">
             <el-button @click="t">+</el-button>
+            <computer></computer>
           </div>
         </el-main>
       </el-container>
@@ -48,11 +49,11 @@
 </template>
 <script setup>
 import { ref, reactive, onMounted } from "vue";
-import {GetCpuInfo} from "../../wailsjs/go/main/App.js"
+import {GetCpuInfo,GetUsingCpuInfo} from "../../wailsjs/go/main/App.js"
+import computer from "@/views/computer/index.vue"
 const leftSpan = ref(4);
 const rightSpan = ref(20);
 const isCollapse = ref(false);
-
 const leftElMenu=ref(null)
 const leftWidth = ref("20vh");
 const t = () => {
@@ -62,6 +63,8 @@ const t = () => {
 onMounted(()=>{
     leftWidth.value=leftElMenu.width+"px"
     GetCpuInfo().then(res=>{console.log(res)})
+  GetUsingCpuInfo().then(res=>{console.log(res,"using")})
+
 })
 const changeCollapse = () => {
   isCollapse.value = !isCollapse.value;

@@ -8,4 +8,6 @@ export function GetCpuInfo():Promise<Array<cpu.InfoStat>>;
 
 export function GetMemInfo():Promise<void>;
 
+export function GetUsingCpuInfo():Promise<Array<number>>;
+
 export function Greet(arg1:string):Promise<string>;

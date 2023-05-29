@@ -1,6 +1,7 @@
 package main
 
 import (
+	"changeme/Computer"
 	"changeme/Global"
 	"context"
 	"fmt"
@@ -30,9 +31,11 @@ func (a *App) Greet(name string) string {
 }
 
 func (a *App) GetCpuInfo() []cpu.InfoStat {
-	cpuInfo, _ := cpu.Info()
-	fmt.Println(cpuInfo)
-	return cpuInfo
+	return Computer.GetCpuInfo()
+}
+
+func (a *App) GetUsingCpuInfo() []float64 {
+	return Computer.GetUsingCpuInfo()
 }
 func (a *App) GetMemInfo() {
 
