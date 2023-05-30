@@ -1,5 +1,5 @@
 <template>
-    <div id="main">
+    <div id="computer">
 
     </div>
 </template>
@@ -11,15 +11,15 @@
        // echarts.init(document.getElementById("main")).setOption(props.option)
     })
     const EchartsInit=()=>{
-        echarts.init(document.getElementById("main")).setOption(props.option)
+        echarts.init(document.getElementById("computer")).setOption(props.option)
     }
     defineExpose({
         EchartsInit
     })
     </script>
     <style lang='scss' scoped>
-    #main{
-        width: 100px;
-        height: 100px;
+    #computer{
+        width: 300px;
+        height: 300px;
     }
     </style>

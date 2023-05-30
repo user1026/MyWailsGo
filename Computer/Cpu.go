@@ -11,7 +11,6 @@ type Computer struct {
 
 func GetCpuInfo() cpu.InfoStat {
 	cpuInfo, _ := cpu.Info()
-	fmt.Println(cpuInfo)
 	return cpuInfo[0]
 }
 

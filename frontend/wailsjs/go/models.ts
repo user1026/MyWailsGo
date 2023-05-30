@@ -1,3 +1,24 @@
+export namespace Computer {
+	
+	export class MemInfo {
+	    total: number;
+	    used: number;
+	    usePr: number;
+	
+	    static createFrom(source: any = {}) {
+	        return new MemInfo(source);
+	    }
+	
+	    constructor(source: any = {}) {
+	        if ('string' === typeof source) source = JSON.parse(source);
+	        this.total = source["total"];
+	        this.used = source["used"];
+	        this.usePr = source["usePr"];
+	    }
+	}
+
+}
+
 export namespace cpu {
 	
 	export class InfoStat {

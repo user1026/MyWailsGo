@@ -37,8 +37,8 @@ func (a *App) GetCpuInfo() cpu.InfoStat {
 func (a *App) GetUsingCpuInfo() float64 {
 	return Computer.GetUsingCpuInfo()
 }
-func (a *App) GetMemInfo() {
-
+func (a *App) GetMemInfo() Computer.MemInfo {
+	return Computer.GetMemInfo()
 }
 func (a *App) GetAllInfo() {
 

@@ -49,7 +49,7 @@
 </template>
 <script setup>
 import { ref, reactive, onMounted } from "vue";
-import {GetCpuInfo,GetUsingCpuInfo} from "../../wailsjs/go/main/App.js"
+import {GetCpuInfo,GetUsingCpuInfo,GetMemInfo} from "../../wailsjs/go/main/App.js"
 import computer from "@/views/computer/index.vue"
 const leftSpan = ref(4);
 const rightSpan = ref(20);
@@ -64,6 +64,7 @@ onMounted(()=>{
     leftWidth.value=leftElMenu.width+"px"
   //   GetCpuInfo().then(res=>{console.log(res)})
   // GetUsingCpuInfo().then(res=>{console.log(res,"using")})
+  GetMemInfo().then(res=>{console.log(res,"men")})
 
 })
 const changeCollapse = () => {
