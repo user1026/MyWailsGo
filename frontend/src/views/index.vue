@@ -62,8 +62,8 @@ const t = () => {
 };
 onMounted(()=>{
     leftWidth.value=leftElMenu.width+"px"
-    GetCpuInfo().then(res=>{console.log(res)})
-  GetUsingCpuInfo().then(res=>{console.log(res,"using")})
+  //   GetCpuInfo().then(res=>{console.log(res)})
+  // GetUsingCpuInfo().then(res=>{console.log(res,"using")})
 
 })
 const changeCollapse = () => {

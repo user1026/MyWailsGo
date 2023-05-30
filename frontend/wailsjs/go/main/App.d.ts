@@ -4,10 +4,10 @@ import {cpu} from '../models';
 
 export function GetAllInfo():Promise<void>;
 
-export function GetCpuInfo():Promise<Array<cpu.InfoStat>>;
+export function GetCpuInfo():Promise<cpu.InfoStat>;
 
 export function GetMemInfo():Promise<void>;
 
-export function GetUsingCpuInfo():Promise<Array<number>>;
+export function GetUsingCpuInfo():Promise<number>;
 
 export function Greet(arg1:string):Promise<string>;

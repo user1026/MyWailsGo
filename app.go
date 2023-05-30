@@ -30,11 +30,11 @@ func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
 }
 
-func (a *App) GetCpuInfo() []cpu.InfoStat {
+func (a *App) GetCpuInfo() cpu.InfoStat {
 	return Computer.GetCpuInfo()
 }
 
-func (a *App) GetUsingCpuInfo() []float64 {
+func (a *App) GetUsingCpuInfo() float64 {
 	return Computer.GetUsingCpuInfo()
 }
 func (a *App) GetMemInfo() {

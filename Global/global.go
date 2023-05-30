@@ -45,10 +45,13 @@ func ErrorDialog(err error, str string) bool {
 	return false
 }
 func InfoDialog(str string) {
-	runtime.MessageDialog(Global_ConText, runtime.MessageDialogOptions{
+	_, err := runtime.MessageDialog(Global_ConText, runtime.MessageDialogOptions{
 		Type:          "Info",
 		Title:         "通知",
 		Message:       str,
 		DefaultButton: "是",
 	})
+	if err != nil {
+		return
+	}
 }

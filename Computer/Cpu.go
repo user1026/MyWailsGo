@@ -9,14 +9,14 @@ import (
 type Computer struct {
 }
 
-func GetCpuInfo() []cpu.InfoStat {
+func GetCpuInfo() cpu.InfoStat {
 	cpuInfo, _ := cpu.Info()
 	fmt.Println(cpuInfo)
-	return cpuInfo
+	return cpuInfo[0]
 }
 
-func GetUsingCpuInfo() []float64 {
-	useInfo, _ := cpu.Percent(2*time.Second, false)
+func GetUsingCpuInfo() float64 {
+	useInfo, _ := cpu.Percent(1*time.Second, false)
 	fmt.Println(useInfo, "useInfo")
-	return useInfo
+	return useInfo[0]
 }
