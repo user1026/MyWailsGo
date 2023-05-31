@@ -28,7 +28,7 @@ const option =ref({
       x: "center",
       y: "center",
       textStyle: {
-        fontSize: "60",
+      //  fontSize: "60",
         color: "#FFFFFF",
         fontFamily: "DINAlternate-Bold, DINAlternate",
         foontWeight: "600",

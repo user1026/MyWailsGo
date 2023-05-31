@@ -5,28 +5,21 @@
         <el-col :span="leftSpan"> -->
       <el-aside :width="leftWidth">
         <div id="left">
-       
             <el-icon @click="changeCollapse">
               <Menu />
             </el-icon>
-        
           <el-menu
           ref="leftElMenu"
-            default-active="2"
+            default-active="/index/echart"
             class="leftMenu el-menu-vertical-demo"
             :collapse="isCollapse"
+            router 
           >
-            <el-menu-item index="1">
+            <el-menu-item index="/index/echarts">
               <el-icon>
                 <document />
               </el-icon>
-              <template #title>Navigator Three</template>
-            </el-menu-item>
-            <el-menu-item index="2">
-              <el-icon>
-                <document />
-              </el-icon>
-              <template #title>Navigator Three</template>
+              <template #title>电脑信息</template>
             </el-menu-item>
           </el-menu>
         </div>
@@ -37,8 +30,7 @@
         <el-header></el-header>
         <el-main>
           <div id="right">
-            <el-button @click="t">+</el-button>
-            <computer></computer>
+            <router-view></router-view>
           </div>
         </el-main>
       </el-container>
@@ -95,5 +87,8 @@ const changeCollapse = () => {
   width: 100%;
   height: 100vh;
   background-color: blue;
+}
+.el-main{
+  padding: 0;
 }
 </style>

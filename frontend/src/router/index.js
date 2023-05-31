@@ -12,6 +12,12 @@ const routes=[
     {
         path:"/index",
         component:index,
+        children:[
+            {
+                path:"echarts",
+                component:()=>import("@/views/computer/index.vue")
+            }
+        ]
     }
 ]
 const router = createRouter({
