@@ -1,5 +1,8 @@
 import {ref} from "vue"
-let cpuInfo=()=>{
+import   * as echarts from "echarts"
+import {GetCpuInfo,GetUsingCpuInfo,GetMemInfo} from "../../../wailsjs/go/main/App.js"
+let cpuInfo=async ()=>{
+  const UsingCpu=ref("0")
   const option =ref({
     title: [
       {
@@ -13,7 +16,7 @@ let cpuInfo=()=>{
         },
       },
       {
-        text: `${UsingCpu.value}`,
+        text: "0",
         x: "center",
         y: "center",
         textStyle: {
@@ -103,11 +106,12 @@ let cpuInfo=()=>{
       },
     ],
   });
-const cpuInfo=ref({})
-
+  cpuInfo.value=await GetCpuInfo().then(res=>res);
+  UsingCpu.value=await GetUsingCpuInfo().then(res=>res);
+  option.value.title[1].text=UsingCpu.value.toFixed(2)+"";
   return {
-    cpuOption,
-    cpuInfo
+    cpuInfo,
+    option,
   }
 }
 
