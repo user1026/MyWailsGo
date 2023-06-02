@@ -4,7 +4,7 @@
     </div>
 </template>
     <script setup>
-    import { ref,reactive,onMounted } from 'vue'
+    import { ref,reactive,onMounted,watch } from 'vue'
     import   * as echarts from "echarts"
     const props=defineProps(["option"])
     onMounted(()=>{

@@ -107,8 +107,6 @@ let cpuInfo=async ()=>{
     ],
   });
   cpuInfo.value=await GetCpuInfo().then(res=>res);
-  UsingCpu.value=await GetUsingCpuInfo().then(res=>res);
-  option.value.title[1].text=UsingCpu.value.toFixed(2)+"";
   return {
     cpuInfo,
     option,

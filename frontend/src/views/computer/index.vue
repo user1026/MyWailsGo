@@ -1,20 +1,19 @@
 <template>
   <div>
-    <el-descriptions title="Customized style list" :column="3" border>
+    <el-descriptions title="cpu信息" :column="3" border>
       <el-descriptions-item
-        label="Username"
+        label="cpu型号"
         label-align="right"
         align="center"
         label-class-name="my-label"
         class-name="my-content"
-        width="150px"
-        >kooriookami</el-descriptions-item
+        >{{info.modelName}}</el-descriptions-item
       >
-      <el-descriptions-item label="Telephone" label-align="right" align="center"
-        >18100000000</el-descriptions-item
+      <el-descriptions-item label="频率" label-align="right" align="center"
+        >{{info.mhz+'mhz'}}</el-descriptions-item
       >
-      <el-descriptions-item label="Place" label-align="right" align="center"
-        >Suzhou</el-descriptions-item
+      <el-descriptions-item label="cpu核心" label-align="right" align="center"
+        >{{info.cores}}</el-descriptions-item
       >
      
     </el-descriptions>
@@ -24,27 +23,26 @@
     </div>
 </template>
 <script setup>
-import { ref,reactive,onMounted,onBeforeMount} from 'vue'
+import { ref,reactive,onMounted,onBeforeMount,watch} from 'vue'
 import tu from "@/views/echarts/index.vue"
-//import {GetCpuInfo,GetUsingCpuInfo} from "../../../wailsjs/go/main/App.js"
+import {GetCpuInfo,GetUsingCpuInfo} from "../../../wailsjs/go/main/App.js"
 import CpuInfo from "./cpuInfo.js"
 const UsingCpu=ref("0")
 const chart=ref(null)
-const option=ref(null)
-
+const option=ref({title:[{},{text:""}]})
+const info=ref({modelName:"",mhz:0,cores:0})
   onBeforeMount(async ()=>{
   const cpuinfo=await CpuInfo();
   option.value=cpuinfo.option.value;
-  console.log(option,"option")
+  info.value=cpuinfo.cpuInfo.value;
+  console.log(option.value,info.value,"option")
 })
 
 onMounted(()=>{
-  try {
-    chart.value.EchartsInit();
-  } catch (error) {
-    console.log(error)
-  }
-  
+    GetUsingCpuInfo().then(res=>{
+      option.value.title[1].text=res.toFixed(2)+"";
+      chart.value.EchartsInit();
+  });
 })
 </script>
 <style lang='scss' scoped>
