@@ -16,6 +16,10 @@ const routes=[
             {
                 path:"echarts",
                 component:()=>import("@/views/computer/index.vue")
+            },
+            {
+                path:"info",
+                component:()=>import("@/views/personInfo/index.vue")
             }
         ]
     }

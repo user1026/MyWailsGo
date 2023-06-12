@@ -21,6 +21,12 @@
               </el-icon>
               <template #title>电脑信息</template>
             </el-menu-item>
+            <el-menu-item index="/index/info">
+              <el-icon>
+                <document />
+              </el-icon>
+              <template #title>信息</template>
+            </el-menu-item>
           </el-menu>
         </div>
       </el-aside>
@@ -56,7 +62,7 @@ onMounted(()=>{
     leftWidth.value=leftElMenu.width+"px"
   //   GetCpuInfo().then(res=>{console.log(res)})
   // GetUsingCpuInfo().then(res=>{console.log(res,"using")})
-  GetMemInfo().then(res=>{console.log(res,"men")})
+ // GetMemInfo().then(res=>{console.log(res,"men")})
 
 })
 const changeCollapse = () => {

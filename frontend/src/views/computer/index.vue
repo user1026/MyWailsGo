@@ -1,6 +1,7 @@
 <template>
+  <div id="computer">
   <div>
-    <el-descriptions title="cpu信息" :column="3" border>
+    <el-descriptions title="cpu信息" :column="3" border class="elFont">
       <el-descriptions-item
         label="cpu型号"
         label-align="right"
@@ -19,8 +20,11 @@
     </el-descriptions>
   </div>
     <div>
-        <tu :option="option" ref="chart"></tu>
+        <tu :option="option" style="width: 300px;height: 300px;"  ref="chart"></tu>
+        <!-- :width="width" :height="height" -->
     </div>
+    
+  </div>
 </template>
 <script setup>
 import { ref,reactive,onMounted,onBeforeMount,watch} from 'vue'
@@ -30,6 +34,8 @@ import CpuInfo from "./cpuInfo.js"
 const UsingCpu=ref("0")
 const chart=ref(null)
 const option=ref({title:[{},{text:""}]})
+const width=ref("200px");
+const height=ref("200px")
 const info=ref({modelName:"",mhz:0,cores:0})
   onBeforeMount(async ()=>{
   const cpuinfo=await CpuInfo();
@@ -46,5 +52,14 @@ onMounted(()=>{
 })
 </script>
 <style lang='scss' scoped>
-
+#computer{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  .elFont{
+    color: white;
+  }
+}
 </style>

@@ -25,10 +25,10 @@ const router=useRouter();
 const to=()=>{
 router.push("/index")
 }
-window.runtime.EventsOn("openFile",(data)=>{
-    count.value=JSON.stringify(data)
-    console.log(data);
-})
+// window.runtime.EventsOn("openFile",(data)=>{
+//     count.value=JSON.stringify(data)
+//     console.log(data);
+// })
 
 </script>
 <style lang='scss' scoped>
