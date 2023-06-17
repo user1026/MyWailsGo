@@ -4,15 +4,15 @@ const http=axios.create({
 })
 
 http.interceptors.response.use(res=>{
-  return res;
+  return res.data;
 })
 http.interceptors.request.use(req=>{
   return req;
 })
 
-export let get=({url,param})=>{
-return http.get(url,param);
+export let get=(url,params)=>{
+return http.get(url,{params});
 }
-export let post=({url,data})=>{
+export let post=(url,data)=>{
 return http.post(url,data)
 }

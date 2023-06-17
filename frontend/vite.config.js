@@ -37,9 +37,12 @@ export default defineConfig({
     port: 7000,
     proxy: {
       // 选项写法
-      '/qqapi': {
+      '^/cc': {
         target: 'https://zy.xywlapi.cc', // 所要代理的目标地址，也就是后台接口地址
-        //rewrite: path => path.replace(/^\/cc/g, ''),
+        rewrite: path =>{
+          console.log(path,"---------");
+         return path.replace(/^\/cc/, '')
+        },
         changeOrigin: true, // true/false, Default: false - changes the origin of the host header to the target URL
       },
         '/ip': {
