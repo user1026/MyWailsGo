@@ -1,22 +1,11 @@
-package utils
+package Settings
 
 import (
 	"changeme/Global"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
-func BToGb(num uint64) float64 {
-	var Gb uint64 = 1024 * 1024 * 1024
-	var Mb uint64 = 1024 * 1024
-	if (num / Gb) > 1 {
-		return float64(num) / float64(Gb)
-	} else if (num / Mb) > 1 {
-		return float64(num) / float64(Mb)
-	}
-	return 0.00
-}
-
-func OpenDir() string {
+func SetExportFileUrl() string {
 	fileName, err := runtime.OpenDirectoryDialog(Global.Global_ConText, runtime.OpenDialogOptions{
 		DefaultDirectory: "C:",
 		Title:            "请选择文件夹",
@@ -28,6 +17,7 @@ func OpenDir() string {
 			Message:       "选择文件夹发生错误",
 			DefaultButton: "确认",
 		})
+		fileName = ""
 	}
 	return fileName
 }

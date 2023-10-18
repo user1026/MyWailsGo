@@ -3,9 +3,9 @@ package main
 import (
 	"changeme/Computer"
 	"changeme/Global"
+	"changeme/Settings"
 	"context"
 	"fmt"
-	"github.com/shirou/gopsutil/cpu"
 )
 
 // App struct
@@ -30,18 +30,18 @@ func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
 }
 
-func (a *App) GetCpuInfo() cpu.InfoStat {
+func (a *App) GetCpuInfo() Computer.CPUInfo {
 	return Computer.GetCpuInfo()
 }
 
 func (a *App) GetUsingCpuInfo() float64 {
 	return Computer.GetUsingCpuInfo()
 }
-func (a *App) GetMemInfo() Computer.MemInfo {
-	return Computer.GetMemInfo()
+func (a *App) GetRamInfo() Computer.RamInfo {
+	return Computer.GetRamInfo()
 }
-func (a *App) GetAllInfo() {
-
+func (a *App) SetExportFileUrl() string {
+	return Settings.SetExportFileUrl()
 }
 
 func openFile(data ...interface{}) {

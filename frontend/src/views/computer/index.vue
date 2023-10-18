@@ -8,13 +8,13 @@
         align="center"
         label-class-name="my-label"
         class-name="my-content"
-        >{{info.modelName}}</el-descriptions-item
+        >{{cpuInfo.Name}}</el-descriptions-item
       >
-      <el-descriptions-item label="频率" label-align="right" align="center"
-        >{{info.mhz+'mhz'}}</el-descriptions-item
+      <el-descriptions-item label="cpu当前频率" label-align="right" align="center"
+        >{{cpuInfo.GHZ+'GHZ'}}</el-descriptions-item
       >
       <el-descriptions-item label="cpu核心" label-align="right" align="center"
-        >{{info.cores}}</el-descriptions-item
+        >{{cpuInfo.Cores}}核{{cpuInfo.Threads}}线程</el-descriptions-item
       >
      
     </el-descriptions>
@@ -28,20 +28,22 @@
 </template>
 <script setup>
 import { ref,reactive,onMounted,onBeforeMount,watch} from 'vue'
-import tu from "@/views/echarts/index.vue"
+import tu from "@/components/echarts.vue"
 import {GetCpuInfo,GetUsingCpuInfo} from "../../../wailsjs/go/main/App.js"
-import CpuInfo from "./cpuInfo.js"
+import ComputerInfo from "./ComputerInfo.js"
 const UsingCpu=ref("0")
 const chart=ref(null)
 const option=ref({title:[{},{text:""}]})
 const width=ref("200px");
 const height=ref("200px")
-const info=ref({modelName:"",mhz:0,cores:0})
+const cpuInfo=ref({Name:"",GHZ:0,Cores:0,Threads:0})
+const ramInfo=ref({})
   onBeforeMount(async ()=>{
-  const cpuinfo=await CpuInfo();
-  option.value=cpuinfo.option.value;
-  info.value=cpuinfo.cpuInfo.value;
-  console.log(option.value,info.value,"option")
+  const computerInfo=await ComputerInfo();
+  option.value=computerInfo.option.value;
+  cpuInfo.value=computerInfo.cpuInfo.value;
+  ramInfo.value=computerInfo.ramInfo.value;
+  //console.log(option.value,cpuInfo.value,ramInfo.value,"option")
 })
 
 onMounted(()=>{
@@ -56,7 +58,7 @@ onMounted(()=>{
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: black;
+  background-color: white;
   overflow: hidden;
   .elFont{
     color: white;

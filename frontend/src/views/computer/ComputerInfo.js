@@ -1,7 +1,7 @@
-import {ref} from "vue"
+import {reactive, ref} from "vue"
 import   * as echarts from "echarts"
-import {GetCpuInfo,GetUsingCpuInfo,GetMemInfo} from "../../../wailsjs/go/main/App.js"
-let cpuInfo=async ()=>{
+import {GetCpuInfo,GetUsingCpuInfo,GetRamInfo} from "../../../wailsjs/go/main/App.js"
+let ComputerInfo=async ()=>{
   const UsingCpu=ref("0")
   const option =ref({
     title: [
@@ -10,7 +10,7 @@ let cpuInfo=async ()=>{
         x: "center",
         top: "55%",
         textStyle: {
-          color: "#FFFFFF",
+          color: "#000000",
           fontSize: 16,
           fontWeight: "100",
         },
@@ -21,13 +21,13 @@ let cpuInfo=async ()=>{
         y: "center",
         textStyle: {
         //  fontSize: "60",
-          color: "#FFFFFF",
+          color: "#000000",
           fontFamily: "DINAlternate-Bold, DINAlternate",
-          foontWeight: "600",
+          fontWeight: "600",
         },
       },
     ],
-    backgroundColor: "#111",
+    backgroundColor: "#FFFFFF",
     polar: {
       radius: ["42%", "52%"],
       center: ["50%", "50%"],
@@ -57,7 +57,7 @@ let cpuInfo=async ()=>{
         barWidth: 30,
         showBackground: true,
         backgroundStyle: {
-          color: "rgba(66, 66, 66, .3)",
+          color: "rgba(66, 66, 66, .5)",
         },
         data: [60],
         coordinateSystem: "polar",
@@ -84,7 +84,7 @@ let cpuInfo=async ()=>{
         hoverAnimation: false,
         center: ["50%", "50%"],
         itemStyle: {
-          color: "rgba(66, 66, 66, .1)",
+          color: "rgba(255, 255, 255, .1)",
           borderWidth: 1,
           borderColor: "#5269EE",
         },
@@ -106,13 +106,16 @@ let cpuInfo=async ()=>{
       },
     ],
   });
-  cpuInfo.value=await GetCpuInfo().then(res=>res);
+  let cpuInfo=ref({}),ramInfo=ref({})
+  cpuInfo.value=await GetCpuInfo()
+  ramInfo.value=await GetRamInfo()
   return {
     cpuInfo,
     option,
+    ramInfo
   }
 }
 
 
 
-export default  cpuInfo
+export default  ComputerInfo

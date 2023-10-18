@@ -5,27 +5,38 @@
         <el-col :span="leftSpan"> -->
       <el-aside :width="leftWidth">
         <div id="left">
-            <el-icon @click="changeCollapse">
-              <Menu />
-            </el-icon>
           <el-menu
           ref="leftElMenu"
-            default-active="/index/echart"
+            :default-active="computerUrl"
             class="leftMenu el-menu-vertical-demo"
-            :collapse="isCollapse"
             router 
           >
-            <el-menu-item index="/index/echarts">
-              <el-icon>
-                <document />
+            <el-menu-item :index="computerUrl">
+              <el-icon v-if="activeUrl==computerUrl">
+              <img  src="../assets/images/computer_active.png" alt="" srcset="">
               </el-icon>
+              <el-icon v-else>
+                <img  src="../assets/images/computer_noactive2.png" alt="" srcset="">
+                </el-icon> 
               <template #title>电脑信息</template>
             </el-menu-item>
-            <el-menu-item index="/index/info">
-              <el-icon>
-                <document />
+            <el-menu-item :index="PCHardwareUrl">
+              <el-icon v-if="activeUrl==PCHardwareUrl">
+               <img  src="../assets/images/PCHardware_active.png" alt="" srcset="">
               </el-icon>
-              <template #title>信息</template>
+              <el-icon v-else>
+               <img  src="../assets/images/PCHardware_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>电脑装机</template>
+            </el-menu-item>
+            <el-menu-item :index="SettingsUrl">
+              <el-icon v-if="activeUrl==SettingsUrl">
+               <img  src="../assets/images/settings_active.png" alt="" srcset="">
+              </el-icon>
+              <el-icon v-else>
+               <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>设置</template>
             </el-menu-item>
           </el-menu>
         </div>
@@ -46,30 +57,23 @@
   </div>
 </template>
 <script setup>
-import { ref, reactive, onMounted } from "vue";
-import {GetCpuInfo,GetUsingCpuInfo,GetMemInfo} from "../../wailsjs/go/main/App.js"
+import { ref, reactive, onMounted,watch } from "vue";
+import {GetCpuInfo,GetUsingCpuInfo,GetRamInfo} from "../../wailsjs/go/main/App.js"
+import Global from "../Global/index.js"
 import computer from "@/views/computer/index.vue"
-const leftSpan = ref(4);
-const rightSpan = ref(20);
-const isCollapse = ref(false);
 const leftElMenu=ref(null)
 const leftWidth = ref("20vh");
-const t = () => {
-  leftSpan.value = 8;
-  rightSpan.value = 16;
-};
-onMounted(()=>{
-    leftWidth.value=leftElMenu.width+"px"
-  //   GetCpuInfo().then(res=>{console.log(res)})
-  // GetUsingCpuInfo().then(res=>{console.log(res,"using")})
- // GetMemInfo().then(res=>{console.log(res,"men")})
+const activeUrl=ref("")
+const computerUrl=ref("/computerInfo")
+const PCHardwareUrl=ref("/PCHardware")
+const SettingsUrl=ref("/settings")
+ onMounted(()=>{
 
+ })
+
+watch(()=>Global.activeUrl,(n,o)=>{
+  activeUrl.value=n;
 })
-const changeCollapse = () => {
-  isCollapse.value = !isCollapse.value;
-  // isCollapse.value?leftSpan.value=1:leftSpan.value=4;
-   leftWidth.value=leftElMenu.width+"px";
-};
 </script>
 <style lang="scss" scoped>
 #context {
@@ -81,10 +85,10 @@ const changeCollapse = () => {
 #left {
   
   height: 100vh;
-  background-color: #c6cbd6;
+  background-color: white;
 
   .leftMenu {
-    background-color: #e9ecf3;
+    background-color: white;
     border-right: none;
   }
 }
@@ -96,5 +100,9 @@ const changeCollapse = () => {
 }
 .el-main{
   padding: 0;
+}
+img{
+  width: 20px;
+  height: 20px;
 }
 </style>
