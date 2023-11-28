@@ -1,13 +1,24 @@
 package Computer
 
 type Power struct {
-	Name      string
-	Power     string
-	Price     float64
-	ImgUrl    string
-	long      string
-	wide      string
-	tall      string
+	//电源名
+	Name string
+	//型号
+	Model string
+	//功率
+	Power string
+	//价格
+	Price float64
+	//图片地址
+	ImgUrl string
+	//电源类型
 	PowerType string
-	Info      string
+	//模组类型
+	Type string
+	//详细信息
+	Info string
+}
+
+func GetPowerList() {
+
 }

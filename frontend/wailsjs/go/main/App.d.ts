@@ -4,6 +4,8 @@ import {Computer} from '../models';
 
 export function GetCpuInfo():Promise<Computer.CPUInfo>;
 
+export function GetCpuJSONData():Promise<any>;
+
 export function GetRamInfo():Promise<Computer.RamInfo>;
 
 export function GetUsingCpuInfo():Promise<number>;

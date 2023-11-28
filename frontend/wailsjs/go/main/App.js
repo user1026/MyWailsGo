@@ -6,6 +6,10 @@ export function GetCpuInfo() {
   return window['go']['main']['App']['GetCpuInfo']();
 }
 
+export function GetCpuJSONData() {
+  return window['go']['main']['App']['GetCpuJSONData']();
+}
+
 export function GetRamInfo() {
   return window['go']['main']['App']['GetRamInfo']();
 }

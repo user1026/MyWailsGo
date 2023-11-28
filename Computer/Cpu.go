@@ -1,8 +1,10 @@
 package Computer
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/shirou/gopsutil/cpu"
+	"io/ioutil"
 	"time"
 )
 
@@ -16,14 +18,28 @@ type CPUInfo struct {
 	cpu.InfoStat
 }
 type CPU struct {
-	Name       string
-	Cores      int
-	Threads    int
-	GHZ        int
-	CPUPower   string
+	//CPU名
+	Name string
+	//核心数
+	Cores int
+	//芯片组型号
+	CPUInterface string
+	//线程数
+	Threads int
+	//大核频率
+	MainGHZ string
+	//小核频率
+	AccGHZ string
+	//频率
+	Ghz string
+	//功耗
+	CPUPower string
+	//上市时间
 	CreateTime string
-	Price      float64
-	ImgUrl     string
+	//首发价格
+	Price float64
+	//图片地址
+	ImgUrl string
 }
 
 // GetCpuInfo
@@ -47,4 +63,22 @@ func GetUsingCpuInfo() float64 {
 	useInfo, _ := cpu.Percent(1*time.Second, false)
 	fmt.Println(useInfo, "useInfo")
 	return useInfo[0]
+}
+
+func GetCpuJSONData() interface{} {
+	data, err := ioutil.ReadFile("./Json/CPU.json")
+	if err != nil {
+		fmt.Println(err)
+		return ""
+	}
+	var jsonData map[string]interface{}
+	e := json.Unmarshal(data, &jsonData)
+	if e != nil {
+		fmt.Println(e)
+	}
+	return jsonData["cpu"]
+}
+
+func GetCPUList() {
+
 }

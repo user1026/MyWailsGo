@@ -5,34 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb2e9b2-9eaf-4a43-b742-9a337ec51209" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/Computer/GPU.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Computer/MainBoard.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Computer/Power.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Computer/Ram.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Settings/index.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Computer/Chassis.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Computer/HDD.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Computer/Radiator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Computer/SSD.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/CPU.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/Chassis.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/GPU.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/HDD.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/MainBoard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/Power.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/RAM.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/Radiator.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/SSD.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Descriptions.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/CPU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/GPU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/HDD.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/Power.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/RAM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/SSD.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/manual/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Computer/Cpu.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/Cpu.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/Mem.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Excel/ExcelData.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/Global/global.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer/GPU.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/GPU.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer/MainBoard.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/MainBoard.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer/Power.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/Power.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer/Ram.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/Ram.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/settings.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/computer/cpuInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/computer/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/computer/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/echarts/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/personInfo/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/settings/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/runtime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/runtime/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/runtime/runtime.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/runtime/runtime.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/runtime/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/runtime/runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +64,15 @@
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2VPklG3A2vpgQ3ZrTSs8aAVoHX2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -74,7 +85,7 @@
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../win" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.常规" />
@@ -93,6 +104,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

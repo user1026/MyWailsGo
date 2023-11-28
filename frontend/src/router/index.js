@@ -18,6 +18,10 @@ const routes=[
                 component:()=>import("@/views/PCHardware/index.vue")
             },
             {
+                path:"Manual",
+                component:()=>import("@/views/manual/index.vue")
+            },
+            {
                 path:"Settings",
                 component:()=>import("@/views/settings/index.vue")
             }

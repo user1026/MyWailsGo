@@ -43,7 +43,9 @@ func (a *App) GetRamInfo() Computer.RamInfo {
 func (a *App) SetExportFileUrl() string {
 	return Settings.SetExportFileUrl()
 }
-
+func (a *App) GetCpuJSONData() interface{} {
+	return Computer.GetCpuJSONData()
+}
 func openFile(data ...interface{}) {
 
 }

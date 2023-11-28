@@ -6,15 +6,15 @@
     ExportFileUrl: ""
   })
   const ExportFileTypeList = ref([{
-    label:"txt",
-    value:"txt",
-  },{
-    label:"excel",
-    value:"excel",
+    label: "txt",
+    value: "txt",
+  }, {
+    label: "excel",
+    value: "excel",
   }])
-  const FileUrl= async ()=>{
-     let filename=await SetExportFileUrl();
-     FormData.value.ExportFileUrl=filename
+  const FileUrl = async () => {
+    let filename = await SetExportFileUrl();
+    FormData.value.ExportFileUrl = filename
   }
 </script>
 
@@ -31,10 +31,22 @@
       </el-col>
     </el-row>
     <el-row :gutter="1">
-      <el-form-item label="导出类型">
-        <el-select v-model="FormData.ExportFileType" clearable placeholder="请选择">
-          <el-option v-for="item in ExportFileTypeList" :key="item.value" :label="item.label" :value="item.value" />
-        </el-select>
+      <el-col :span="8">
+        <el-form-item label="导出类型">
+          <el-select v-model="FormData.ExportFileType" clearable placeholder="请选择">
+            <el-option v-for="item in ExportFileTypeList" :key="item.value" :label="item.label" :value="item.value" />
+          </el-select>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row :gutter="1">
+      <el-form-item label="版本">
+        0.0.1
+      </el-form-item>
+    </el-row>
+    <el-row :gutter="1">
+      <el-form-item label="更新时间">
+        2023.10.16
       </el-form-item>
     </el-row>
   </el-form>
