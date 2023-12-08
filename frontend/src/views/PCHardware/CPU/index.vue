@@ -1,7 +1,23 @@
+<template>
+  <el-select v-model="FormData.CPU" clearable value-key="Name" placeholder="请选择CPU">
+    <el-option v-for="(item,i) in CPUList" :key="i" :label="item.Name" :value="item" />
+  </el-select>
+  <template v-if="FormData.CPU.Name">
+    <el-tooltip  class="box-item" effect="light" placement="right">
+      <template #content>
+        <Descriptions :List="CPUInfo" :Info="FormData.CPU" />
+      </template>
+      <el-icon size="25" color="#a3b4b5">
+        <InfoFilled />
+      </el-icon>
+    </el-tooltip>
+  </template>
+</template>
+<script setup>
 import {ref} from "vue"
-
-const CPU = () => {
- 
+import FormData from "../index.js"
+import Descriptions from "@/components/Descriptions.vue"
+const CPUList = ref([]);
 const CPUMap={
   Name:"CPU型号",        
 	Cores:"核心数",         
@@ -27,10 +43,7 @@ const CPUInfo=ref([
   {label:"小核（基准频率~加速频率）",val:"",key:"AccGHZ"},
   {label:"基准频率~加速频率",val:"",key:"GHZ"},
 ])
-  return {
-    GetCPUData,
-    CPUMap,
-    CPUInfo
-  }
-}
-export default CPU;
+</script>
+<style scoped>
+
+</style>

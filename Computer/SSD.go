@@ -16,3 +16,24 @@ type SSD struct {
 	//接口
 	Interface string
 }
+
+// NewSSD
+// @Description:
+// @return *SSD
+func NewSSD() *SSD {
+	return &SSD{}
+}
+
+// GetSSDList
+// @Description:
+// @receiver s *SSD
+func (s *SSD) GetSSDList() {
+
+}
+
+// GetSSDListByHttp
+// @Description:
+// @receiver s *SSD
+func (s *SSD) GetSSDListByHttp() {
+
+}

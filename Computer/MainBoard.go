@@ -19,4 +19,20 @@ type MainBoard struct {
 	Info string
 	//WIFI
 	WIFI string
+	//支持的内存类型
+	SupportRAMType string
+}
+
+// NewMainBoard
+// @Description: 初始化主板结构体用于向前端抛出主板方法
+// @return *MainBoard
+func NewMainBoard() *MainBoard {
+	return &MainBoard{}
+}
+
+// GetMainBoardList
+// @Description: 获取主板列表
+// @receiver m *MainBoard
+func (m *MainBoard) GetMainBoardList() {
+
 }

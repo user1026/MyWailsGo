@@ -20,6 +20,8 @@ type CPUInfo struct {
 type CPU struct {
 	//CPU名
 	Name string
+	//类型
+	Type string
 	//核心数
 	Cores int
 	//芯片组型号
@@ -40,6 +42,13 @@ type CPU struct {
 	Price float64
 	//图片地址
 	ImgUrl string
+}
+
+// NewCPU
+// @Description: 初始化CPU结构体用于向前端抛出CPU方法
+// @return *CPU
+func NewCPU() *CPU {
+	return &CPU{}
 }
 
 // GetCpuInfo
@@ -79,6 +88,6 @@ func GetCpuJSONData() interface{} {
 	return jsonData["cpu"]
 }
 
-func GetCPUList() {
+func (c *CPU) GetCPUList() {
 
 }

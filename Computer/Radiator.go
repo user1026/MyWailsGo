@@ -22,3 +22,24 @@ type Radiator struct {
 	//详细信息
 	Info string
 }
+
+// NewRadiator
+// @Description:
+// @return *Radiator
+func NewRadiator() *Radiator {
+	return &Radiator{}
+}
+
+// GetRadiatorList
+// @Description:
+// @receiver r *Radiator
+func (r *Radiator) GetRadiatorList() {
+
+}
+
+// GetRadiatorListByHttp
+// @Description:
+// @receiver r *Radiator
+func (r *Radiator) GetRadiatorListByHttp() {
+
+}

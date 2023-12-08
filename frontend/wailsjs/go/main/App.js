@@ -10,16 +10,16 @@ export function GetCpuJSONData() {
   return window['go']['main']['App']['GetCpuJSONData']();
 }
 
+export function GetPath() {
+  return window['go']['main']['App']['GetPath']();
+}
+
 export function GetRamInfo() {
   return window['go']['main']['App']['GetRamInfo']();
 }
 
 export function GetUsingCpuInfo() {
   return window['go']['main']['App']['GetUsingCpuInfo']();
-}
-
-export function Greet(arg1) {
-  return window['go']['main']['App']['Greet'](arg1);
 }
 
 export function SetExportFileUrl() {

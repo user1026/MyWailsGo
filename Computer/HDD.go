@@ -17,6 +17,23 @@ type HDD struct {
 	Price string
 }
 
-func GetHDDList() {
+// NewHDD
+// @Description:
+// @return *HDD
+func NewHDD() *HDD {
+	return &HDD{}
+}
+
+// GetHDDList
+// @Description: 获取本地机械硬盘产品列表
+// @receiver h *HDD
+func (h *HDD) GetHDDList() {
+
+}
+
+// GetHDDListByHttp
+// @Description: 发起请求获取机械硬盘产品列表
+// @receiver h *HDD
+func (h *HDD) GetHDDListByHttp() {
 
 }

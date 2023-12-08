@@ -12,12 +12,9 @@
     reactive,
     onMounted,
   } from "vue"
-  import CPU from "../views/PCHardware/CPU.js"
-  const Cpu = CPU();
   const prop = defineProps(["List", "Info"])
   const size = ref("")
   const List = ref({})
-  List.value = Cpu.CPUInfo.value;
   if (prop.Info != null) {
     List.value.forEach(v => {
       v.val = prop.Info[v.key] ? prop.Info[v.key] : "";

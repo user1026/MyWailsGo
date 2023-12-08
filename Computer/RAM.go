@@ -30,6 +30,13 @@ type RAM struct {
 	Type string
 }
 
+// NewRAM
+// @Description: 初始化RAM结构体，用于向前端抛出RAM方法
+// @return *RAM
+func NewRAM() *RAM {
+	return &RAM{}
+}
+
 // GetRamInfo
 // @Description: 获取本机内存信息
 // @return RamInfo
@@ -42,6 +49,16 @@ func GetRamInfo() RamInfo {
 	return m
 }
 
-func GetRamList() {
+// GetRamList
+// @Description:
+// @receiver r *RAM
+func (r *RAM) GetRamList() {
+
+}
+
+// GetRamListByHttp
+// @Description:
+// @receiver r *RAM
+func (r *RAM) GetRamListByHttp() {
 
 }

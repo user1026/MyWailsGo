@@ -3,6 +3,7 @@ package utils
 import (
 	"changeme/Global"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
+	"os"
 )
 
 func BToGb(num uint64) float64 {
@@ -30,4 +31,9 @@ func OpenDir() string {
 		})
 	}
 	return fileName
+}
+
+func GetPath() string {
+	str, _ := os.Getwd()
+	return str
 }

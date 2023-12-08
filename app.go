@@ -5,7 +5,7 @@ import (
 	"changeme/Global"
 	"changeme/Settings"
 	"context"
-	"fmt"
+	"os"
 )
 
 // App struct
@@ -25,11 +25,6 @@ func (a *App) startup(ctx context.Context) {
 	Global.Global_ConText = ctx
 }
 
-// Greet returns a greeting for the given name
-func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time!", name)
-}
-
 func (a *App) GetCpuInfo() Computer.CPUInfo {
 	return Computer.GetCpuInfo()
 }
@@ -46,6 +41,7 @@ func (a *App) SetExportFileUrl() string {
 func (a *App) GetCpuJSONData() interface{} {
 	return Computer.GetCpuJSONData()
 }
-func openFile(data ...interface{}) {
-
+func (a *App) GetPath() string {
+	str, _ := os.Getwd()
+	return str
 }

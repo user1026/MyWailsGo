@@ -12,13 +12,33 @@ type Chassis struct {
 	//高度
 	Height string
 	//支持的散热器高度
-	Radiator string
+	RadiatorHeight string
 	//接口
 	Interface map[string]string
 	//详细信息
 	Info string
+	//支持的主板类型
+	SupportMainBoardTypes string
+	//支持的电源类型
+	SupportPowerTypes string
+	//支持的显卡长度
+	SupportGPULength string
 }
 
-func GetChassisList() {
+// NewChassis
+// @Description:
+// @return *Chassis
+func NewChassis() *Chassis {
+	return &Chassis{}
+}
+
+// GetChassisList
+// @Description:
+// @receiver c *Chassis
+func (c *Chassis) GetChassisList() {
+
+}
+
+func (c *Chassis) GetChassisListByHttp() {
 
 }

@@ -2,6 +2,7 @@ package main
 
 import (
 	"changeme/AppMenu"
+	"changeme/Computer"
 	"changeme/Event"
 	"embed"
 	"github.com/wailsapp/wails/v2"
@@ -35,6 +36,15 @@ func main() {
 		Menu:             AppMenu.AllMenuList(),
 		Bind: []interface{}{
 			app,
+			Computer.NewCPU(),
+			Computer.NewPower(),
+			Computer.NewRAM(),
+			Computer.NewHDD(),
+			Computer.NewGpu(),
+			Computer.NewChassis(),
+			Computer.NewRadiator(),
+			Computer.NewSSD(),
+			Computer.NewMainBoard(),
 		},
 	})
 

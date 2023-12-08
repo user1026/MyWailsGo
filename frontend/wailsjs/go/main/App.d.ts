@@ -6,10 +6,10 @@ export function GetCpuInfo():Promise<Computer.CPUInfo>;
 
 export function GetCpuJSONData():Promise<any>;
 
+export function GetPath():Promise<string>;
+
 export function GetRamInfo():Promise<Computer.RamInfo>;
 
 export function GetUsingCpuInfo():Promise<number>;
-
-export function Greet(arg1:string):Promise<string>;
 
 export function SetExportFileUrl():Promise<string>;

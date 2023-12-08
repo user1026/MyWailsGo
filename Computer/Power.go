@@ -19,6 +19,23 @@ type Power struct {
 	Info string
 }
 
-func GetPowerList() {
+// NewPower
+// @Description:
+// @return *Power
+func NewPower() *Power {
+	return &Power{}
+}
+
+// GetPowerList
+// @Description:
+// @receiver p *Power
+func (p *Power) GetPowerList() {
+
+}
+
+// GetPowerListByHttp
+// @Description:
+// @receiver p *Power
+func (p *Power) GetPowerListByHttp() {
 
 }

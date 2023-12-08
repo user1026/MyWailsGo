@@ -1,0 +1,64 @@
+<template>
+  <template v-for="(v,i) in HDDvalues" :key="v.key">
+    <el-select  v-model="FormData.HDD" clearable placeholder="请选择机械硬盘">
+      <el-option v-for="item in HDDList" :key="item.value" :label="item.label" :value="item.value" />
+    </el-select>
+    <template v-if="FormData.HDD.Name">
+      <el-tooltip  class="box-item" effect="light" placement="right">
+        <template #content>
+          <Descriptions />
+        </template>
+        <el-icon size="25" color="#a3b4b5">
+          <InfoFilled />
+        </el-icon>
+      </el-tooltip>
+    </template>
+  </template>
+  <el-button @click="addHDD">
+    +
+  </el-button>
+  <el-button @click="delHDD">
+    -
+  </el-button>
+</template>
+<script setup>
+import {ref} from "vue"
+import { ElMessage } from 'element-plus'
+import FormData from "../index.js"
+import Descriptions from "@/components/Descriptions.vue"
+const HDDList = ref([]);
+let n=0;
+const HDDvalues=ref([{
+  key:0,
+  value:""
+}])
+  const HDDInfo=ref([
+    {label:"硬盘名",val:"",key:"Name"},
+    {label:"容量",val:"",key:"Total"},
+    {label:"转速",val:"",key:"Name"},
+    {label:"参考价格",val:"",key:"Price"},
+    {label:"上市日期",val:"",key:"CreateTime"},
+    {label:"硬盘类型",val:"",key:"Type"},
+    {label:"图片",val:"",key:"ImgUrl"},
+  ])
+  const addHDD=()=>{
+    if(n==3){
+      ElMessage({
+    message: '目前只限制4个',
+    type: 'warning',
+  })
+      return
+    }
+    HDDvalues.value.push({key:n++,value:""})
+  }
+  const delHDD=()=>{
+    if(n==0){
+        return 
+    }
+    HDDvalues.value.pop();
+    n--;
+  }
+</script>
+<style scoped>
+
+</style>

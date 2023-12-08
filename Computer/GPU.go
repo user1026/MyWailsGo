@@ -33,6 +33,23 @@ type GPU struct {
 	Height string
 }
 
-func GetGPUList() {
+// NewGpu
+// @Description: 初始化GPU结构体，用于想前端抛出GPU方法
+// @return *GPU
+func NewGpu() *GPU {
+	return &GPU{}
+}
+
+// GetGPUList
+// @Description: 本地获取GPU列表
+// @receiver g *GPU
+func (g *GPU) GetGPUList() {
+
+}
+
+// GetGPUByHttp
+// @Description: 发起请求获取GPU产品列表
+// @receiver g *GPU
+func (g *GPU) GetGPUByHttp() {
 
 }
