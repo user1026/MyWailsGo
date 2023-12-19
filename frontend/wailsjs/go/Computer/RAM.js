@@ -5,3 +5,7 @@
 export function GetRamList() {
   return window['go']['Computer']['RAM']['GetRamList']();
 }
+
+export function GetRamListByHttp() {
+  return window['go']['Computer']['RAM']['GetRamListByHttp']();
+}

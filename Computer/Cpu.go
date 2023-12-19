@@ -54,7 +54,7 @@ func NewCPU() *CPU {
 // GetCpuInfo
 // @Description: 获取CPU信息
 // @return cpu.InfoStat
-func GetCpuInfo() CPUInfo {
+func (c *CPU) GetCpuInfo() CPUInfo {
 	var CpuInfo CPUInfo
 	CpuInfo.Cores, _ = cpu.Counts(false)
 	CpuInfo.Threads, _ = cpu.Counts(true)
@@ -68,13 +68,13 @@ func GetCpuInfo() CPUInfo {
 // GetUsingCpuInfo
 // @Description: 获取CPU运行时的信息
 // @return float64
-func GetUsingCpuInfo() float64 {
+func (c *CPU) GetUsingCpuInfo() float64 {
 	useInfo, _ := cpu.Percent(1*time.Second, false)
 	fmt.Println(useInfo, "useInfo")
 	return useInfo[0]
 }
 
-func GetCpuJSONData() interface{} {
+func (c *CPU) GetCpuJSONData() interface{} {
 	data, err := ioutil.ReadFile("./Json/CPU.json")
 	if err != nil {
 		fmt.Println(err)

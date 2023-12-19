@@ -3,19 +3,19 @@
     <el-col :span="12">
       <el-form :model="FormData" label-width="120px">
         <el-form-item label="CPU">
-         <CPU />
+          <CPU />
         </el-form-item>
         <el-form-item label="主板">
-         <MainBoard />
+          <MainBoard />
         </el-form-item>
         <el-form-item label="内存">
-        <RAM />
+          <RAM />
         </el-form-item>
         <el-form-item label="显卡">
-        <GPU />
+          <GPU />
         </el-form-item>
         <el-form-item label="散热器">
-        <Radiator />
+          <Radiator />
         </el-form-item>
         <el-form-item label="电源">
           <Power />
@@ -47,22 +47,16 @@
     post,
     get
   } from "@/utils/http.js";
-  import  CPU from "./CPU/index.vue";
-  import GPU  from "./GPU/index.vue";
-  import RAM  from "./RAM/index.vue";
-  import Power  from "./Power/index.vue";
-  import HHD  from "./HDD/index.vue";
-  import MainBoard  from "./MainBoard/index.vue";
-  import  SSD from "./SSD/index.vue";
-  import  Chassis  from "./Chassis/index.vue";
-  import Radiator  from "./Radiator/index.vue";
+  import CPU from "./CPU/index.vue";
+  import GPU from "./GPU/index.vue";
+  import RAM from "./RAM/index.vue";
+  import Power from "./Power/index.vue";
+  import MainBoard from "./MainBoard/index.vue";
+  import SSD from "./SSD/index.vue";
+  import Chassis from "./Chassis/index.vue";
+  import Radiator from "./Radiator/index.vue";
   import HDD from "./HDD/index.vue"
-  import  FormData from "./index.js";
-  import {
-    GetCpuJSONData
-  } from "../../../wailsjs/go/main/App.js"
-
- 
+  import FormData from "./index.js";
   // const RadiatorList = ref([]);
   // const CPUList = ref([]);
   // const GPUList = ref([]);
@@ -74,14 +68,11 @@
   // const MainBoardList = ref([]);
   // const CPUInfo = ref({});
   onMounted(async () => {
-  
+
 
   })
-  const add=()=>{
-     
-  }
-  onDeactivated(()=>{
-    
+  onDeactivated(() => {
+
   })
 </script>
 <style lang="scss" scoped>

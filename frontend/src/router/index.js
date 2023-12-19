@@ -10,8 +10,8 @@ const routes=[
         component:index,
         children:[
             {
-                path:"computerInfo",
-                component:()=>import("@/views/computer/index.vue")
+                path:"Introduction",
+                component:()=>import("@/views/Introduction/index.vue")
             },
             {
                 path:"PCHardware",

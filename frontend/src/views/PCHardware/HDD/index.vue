@@ -1,8 +1,14 @@
 <template>
   <template v-for="(v,i) in HDDvalues" :key="v.key">
-    <el-select  v-model="FormData.HDD" clearable placeholder="请选择机械硬盘">
+    <el-select  @change="changeS" v-model="FormData.HDD[i]" clearable placeholder="请选择机械硬盘">
       <el-option v-for="item in HDDList" :key="item.value" :label="item.label" :value="item.value" />
     </el-select>
+    <el-button v-if="i==0" @click="addHDD">
+      +
+    </el-button>
+    <el-button @click="delHDD(i)">
+      -
+    </el-button>
     <template v-if="FormData.HDD.Name">
       <el-tooltip  class="box-item" effect="light" placement="right">
         <template #content>
@@ -14,19 +20,22 @@
       </el-tooltip>
     </template>
   </template>
-  <el-button @click="addHDD">
-    +
-  </el-button>
-  <el-button @click="delHDD">
-    -
-  </el-button>
 </template>
 <script setup>
-import {ref} from "vue"
-import { ElMessage } from 'element-plus'
-import FormData from "../index.js"
-import Descriptions from "@/components/Descriptions.vue"
-const HDDList = ref([]);
+import {ref} from "vue";
+import { ElMessage } from 'element-plus';
+import FormData from "../index.js";
+import Descriptions from "@/components/Descriptions.vue";
+const HDDList = ref([{
+  label:"1",
+  value:1,
+},{
+  label:"2",
+  value:2,
+},{
+  label:"3",
+  value:3,
+}]);
 let n=0;
 const HDDvalues=ref([{
   key:0,
@@ -40,22 +49,26 @@ const HDDvalues=ref([{
     {label:"上市日期",val:"",key:"CreateTime"},
     {label:"硬盘类型",val:"",key:"Type"},
     {label:"图片",val:"",key:"ImgUrl"},
-  ])
+  ]);
+  const changeS=()=>{
+    console.log(FormData.value.HDD);
+  }
   const addHDD=()=>{
     if(n==3){
       ElMessage({
     message: '目前只限制4个',
     type: 'warning',
   })
-      return
+      return ;
     }
-    HDDvalues.value.push({key:n++,value:""})
+    HDDvalues.value.push({key:n++,value:""});
   }
-  const delHDD=()=>{
+  const delHDD=(i)=>{
     if(n==0){
         return 
     }
-    HDDvalues.value.pop();
+    HDDvalues.value.splice(i,1);
+    FormData.value.HDD.splice(i,1);
     n--;
   }
 </script>

@@ -7,12 +7,8 @@ import (
 
 var (
 	Global_ConText context.Context
+	JsonUrl        string = "./Json/"
 )
-
-type Global struct {
-	Context context.Context
-	Error   error
-}
 
 // ErrorDialog
 // @Description: 错误弹框

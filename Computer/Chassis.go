@@ -39,6 +39,9 @@ func (c *Chassis) GetChassisList() {
 
 }
 
+// GetChassisListByHttp
+// @Description:
+// @receiver c *Chassis
 func (c *Chassis) GetChassisListByHttp() {
 
 }

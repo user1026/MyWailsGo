@@ -1,7 +1,6 @@
 package main
 
 import (
-	"changeme/Computer"
 	"changeme/Global"
 	"changeme/Settings"
 	"context"
@@ -25,22 +24,10 @@ func (a *App) startup(ctx context.Context) {
 	Global.Global_ConText = ctx
 }
 
-func (a *App) GetCpuInfo() Computer.CPUInfo {
-	return Computer.GetCpuInfo()
-}
-
-func (a *App) GetUsingCpuInfo() float64 {
-	return Computer.GetUsingCpuInfo()
-}
-func (a *App) GetRamInfo() Computer.RamInfo {
-	return Computer.GetRamInfo()
-}
 func (a *App) SetExportFileUrl() string {
 	return Settings.SetExportFileUrl()
 }
-func (a *App) GetCpuJSONData() interface{} {
-	return Computer.GetCpuJSONData()
-}
+
 func (a *App) GetPath() string {
 	str, _ := os.Getwd()
 	return str

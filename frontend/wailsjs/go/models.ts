@@ -36,22 +36,6 @@ export namespace Computer {
 	        this.microcode = source["microcode"];
 	    }
 	}
-	export class RamInfo {
-	    total: number;
-	    used: number;
-	    usePr: number;
-	
-	    static createFrom(source: any = {}) {
-	        return new RamInfo(source);
-	    }
-	
-	    constructor(source: any = {}) {
-	        if ('string' === typeof source) source = JSON.parse(source);
-	        this.total = source["total"];
-	        this.used = source["used"];
-	        this.usePr = source["usePr"];
-	    }
-	}
 
 }
 

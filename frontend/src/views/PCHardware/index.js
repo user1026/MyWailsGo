@@ -6,8 +6,8 @@
   Power: {},
   Chassis: {},
   MainBoard: {},
-  HDD: {},
-  SSD: {},
+  HDD: [],
+  SSD: [],
   Radiator: {}
 })
 export default FormData;

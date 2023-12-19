@@ -25,7 +25,7 @@
         <el-form-item label="导出位置">
           <el-input v-model="FormData.ExportFileUrl"></el-input>
         </el-form-item>
-      </el-col>
+      </el-col> 
       <el-col :span="1">
         <el-button type="primary" @click="FileUrl">选择</el-button>
       </el-col>

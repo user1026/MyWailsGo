@@ -5,3 +5,15 @@
 export function GetCPUList() {
   return window['go']['Computer']['CPU']['GetCPUList']();
 }
+
+export function GetCpuInfo() {
+  return window['go']['Computer']['CPU']['GetCpuInfo']();
+}
+
+export function GetCpuJSONData() {
+  return window['go']['Computer']['CPU']['GetCpuJSONData']();
+}
+
+export function GetUsingCpuInfo() {
+  return window['go']['Computer']['CPU']['GetUsingCpuInfo']();
+}

@@ -4,54 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb2e9b2-9eaf-4a43-b742-9a337ec51209" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/check.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/Introduction/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/CPU/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/Chassis/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/GPU/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/HDD/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/MainBoard/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/Power/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/RAM/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/Radiator/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/SSD/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/CPU.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/CPU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/GPU.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/GPU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/HDD.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/HDD.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Power.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Power.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/RAM.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/RAM.js" afterDir="false" />
+    <list default="true" id="cdb2e9b2-9eaf-4a43-b742-9a337ec51209" name="变更" comment="重构目录结构">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Computer/Chassis.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/Chassis.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Computer/Cpu.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/Cpu.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/GPU.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/GPU.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/HDD.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/HDD.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/MainBoard.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/MainBoard.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/Power.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/Power.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/Radiator.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/Radiator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/Ram.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/RAM.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/SSD.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/SSD.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/Global/global.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Descriptions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Descriptions.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/CPU.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/GPU.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/HDD.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/Power.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/RAM.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/SSD.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/manual/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/manual/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/settings/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +79,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="重构目录结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构目录结构" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

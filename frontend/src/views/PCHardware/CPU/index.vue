@@ -17,6 +17,10 @@
 import {ref} from "vue"
 import FormData from "../index.js"
 import Descriptions from "@/components/Descriptions.vue"
+import {GetCPUList} from "../../../../wailsjs/go/Computer/CPU.js"
+import {
+    GetCpuJSONData
+  } from "../../../../wailsjs/go/Computer/CPU.js"
 const CPUList = ref([]);
 const CPUMap={
   Name:"CPU型号",        
