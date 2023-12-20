@@ -1,9 +1,9 @@
 package main
 
 import (
-	"changeme/AppMenu"
-	"changeme/Computer"
-	"changeme/Event"
+	"MyWailsGo/AppMenu"
+	"MyWailsGo/Computer"
+	"MyWailsGo/Event"
 	"embed"
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"

@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"changeme/Global"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 	"os"
 )
