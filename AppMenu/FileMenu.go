@@ -1,8 +1,8 @@
 package AppMenu
 
 import (
-	"changeme/Event"
-	"changeme/Global"
+	"MyWailsGo/Event"
+	"MyWailsGo/Global"
 	"fmt"
 	"github.com/wailsapp/wails/v2/pkg/menu"
 	"github.com/wailsapp/wails/v2/pkg/menu/keys"

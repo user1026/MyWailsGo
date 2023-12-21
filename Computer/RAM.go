@@ -1,7 +1,7 @@
 package Computer
 
 import (
-	"changeme/utils"
+	"MyWailsGo/utils"
 	"github.com/shirou/gopsutil/mem"
 )
 

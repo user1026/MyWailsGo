@@ -53,7 +53,7 @@
       <!-- </el-col>
         <el-col :span="rightSpan"> -->
       <el-container>
-        <el-header></el-header>
+        <!-- <el-header></el-header> -->
         <el-main>
           <div id="right">
             <router-view></router-view>

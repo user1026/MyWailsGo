@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"MyWailsGo/Global"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 	"os"
 )

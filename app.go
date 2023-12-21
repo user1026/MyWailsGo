@@ -1,8 +1,8 @@
 package main
 
 import (
-	"changeme/Global"
-	"changeme/Settings"
+	"MyWailsGo/Global"
+	"MyWailsGo/Settings"
 	"context"
 	"os"
 )

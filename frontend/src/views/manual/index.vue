@@ -141,6 +141,13 @@
         速度：slc＞mlc＞tlc＞qlc<br>
         寿命：slc＞mlc＞tlc＞qlc
       </el-descriptions-item>
+      <el-descriptions-item>
+        <template #label>
+          <el-tag size="large">m2固态硬盘品牌</el-tag>
+        </template>
+        系统盘首选：三星，西数，凯侠，致钛，英睿达<br>
+        从盘：哪个便宜买哪个
+      </el-descriptions-item>
     </el-descriptions>
     <el-descriptions class="margin-top" title="散热器" :column="1" size="large" border>
       <el-descriptions-item>
@@ -151,16 +158,12 @@
         <ul>
           <li>1.经久耐用，至少扣具不换就能一直用下去，最多换个风扇</li>
           <li>2.价格相较于水冷便宜很多</li>
-          <li>3.</li>
-          <li></li>
-          <li></li>
         </ul>
        缺点：
        <ul>
         <li>1.体积大（会挡住内存条）</li>
         <li>2.性能上限不如水冷高</li>
         <li>3.相较于水冷，安装比较困难</li>
-        <li></li>
        </ul>
       </el-descriptions-item>
       <el-descriptions-item>
@@ -171,17 +174,16 @@
           <ul>
             <li>1.性能较好</li>
             <li>2.外观漂亮，冷头不占空间</li>
-            <li>3.冷头安装简便</li>
-            <li></li>
+            <li>3.冷头安装拆解简便</li>
+            <li>4.短时间使用噪音比风冷小</li>
           </ul>
           缺点：
           <ul>
             <li>1.相较于风冷，使用期限没有风冷长</li>
             <li>2.一旦漏液，会造成其他设备损坏(理赔比较困难)</li>
             <li>3.质保期到了，需要考虑是否更换</li>
-            <li></li>
+            <li>4.长时间高负载使用噪音比风冷大</li>
           </ul>
-      
       </el-descriptions-item>
     </el-descriptions>
     <el-descriptions class="margin-top" title="电源" :column="1" size="large" border>
@@ -189,9 +191,8 @@
         <template #label>
           <el-tag size="large">品牌</el-tag>
         </template>
-        价格：slc＞mlc＞tlc＞qlc<br>
-        速度：slc＞mlc＞tlc＞qlc<br>
-        寿命：slc＞mlc＞tlc＞qlc
+      振华（自有工厂），海韵（自有工厂）、长城（自有工厂）、航嘉（自有工厂）、全汉（自有工厂）、台达（自有工厂）、海盗船（侨威、伟训、伟创力代工 ）、安钛克（高端产品海韵代工）、酷冷至尊（高端由益衡代工）、华硕（海韵，长城，益衡代工）、微星（乔威代工）<br>
+      <span style="color: red;">首选老牌自有工厂，老牌厂商代工也可</span>
       </el-descriptions-item>
     </el-descriptions>
     <div class="bottom">

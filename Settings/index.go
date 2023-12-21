@@ -1,7 +1,7 @@
 package Settings
 
 import (
-	"changeme/Global"
+	"MyWailsGo/Global"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
@@ -20,4 +20,9 @@ func SetExportFileUrl() string {
 		fileName = ""
 	}
 	return fileName
+}
+
+func SetExportFileType() string {
+
+	return "txt"
 }

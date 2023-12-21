@@ -1,4 +1,4 @@
-module changeme
+module MyWailsGo
 
 go 1.18
 
