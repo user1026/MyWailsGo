@@ -3,6 +3,7 @@ package AppMenu
 import (
 	"MyWailsGo/Event"
 	"MyWailsGo/Global"
+	"MyWailsGo/utils"
 	"fmt"
 	"github.com/wailsapp/wails/v2/pkg/menu"
 	"github.com/wailsapp/wails/v2/pkg/menu/keys"
@@ -22,11 +23,11 @@ func openFile(_ *menu.CallbackData) {
 		DefaultDirectory: "C:",
 		Title:            "请选择文件",
 	})
-	if Global.ErrorDialog(err, "选择文件时发生错误") {
+	if utils.ErrorDialog(err, "选择文件时发生错误") {
 		return
 	}
 	file, openErr := excelize.OpenFile(fileName)
-	if Global.ErrorDialog(openErr, "读取文件时发生错误") {
+	if utils.ErrorDialog(openErr, "读取文件时发生错误") {
 		return
 	}
 	fmt.Println(file)

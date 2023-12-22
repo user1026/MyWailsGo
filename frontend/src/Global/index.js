@@ -1,5 +1,7 @@
 import { reactive } from "vue";
 const Global=reactive({
-  activeUrl:""
+  activeUrl:"",
+  ExportFileUrl:"",
+  ExportFileType:"",
 })
 export default Global

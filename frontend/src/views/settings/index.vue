@@ -1,6 +1,7 @@
 <script setup>
-  import { reactive, ref } from 'vue'
-  import { SetExportFileUrl } from '../../../wailsjs/go/main/App'
+  import { reactive, ref,onMounted } from 'vue'
+  import { SetExportFileUrl,SetExportFileType } from '../../../wailsjs/go/main/App'
+  import Global from "../../Global/index.js"
   const FormData = ref({
     ExportFileType: "",
     ExportFileUrl: ""
@@ -14,8 +15,21 @@
   }])
   const FileUrl = async () => {
     let filename = await SetExportFileUrl();
-    FormData.value.ExportFileUrl = filename
+    if(filename!==""){
+      FormData.value.ExportFileUrl = filename
+      Global.ExportFileUrl=filename
+    }
   }
+  const FileType=async ()=>{
+  let flag= await SetExportFileType(FormData.value.ExportFileType)
+  if(flag==false){
+
+  }
+  }
+ onMounted(async ()=>{
+  FormData.value.ExportFileType=Global.ExportFileType
+  FormData.value.ExportFileUrl=Global.ExportFileUrl
+ })
 </script>
 
 <template>
@@ -33,7 +47,7 @@
     <el-row :gutter="1">
       <el-col :span="8">
         <el-form-item label="导出类型">
-          <el-select v-model="FormData.ExportFileType" clearable placeholder="请选择">
+          <el-select v-model="FormData.ExportFileType" @change="FileType" clearable placeholder="请选择">
             <el-option v-for="item in ExportFileTypeList" :key="item.value" :label="item.label" :value="item.value" />
           </el-select>
         </el-form-item>

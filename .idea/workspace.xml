@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a0eae6-6a85-41ad-991d-a042574ee6a0" name="变更" comment="1">
+      <change afterPath="$PROJECT_DIR$/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppMenu/FileMenu.go" beforeDir="false" afterPath="$PROJECT_DIR$/AppMenu/FileMenu.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Computer/RAM.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/RAM.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/Global/global.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Settings/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/index.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/manual/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/manual/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Global/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Global/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/settings/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +41,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2VPklG3A2vpgQ3ZrTSs8aAVoHX2" />
   <component name="ProjectLevelVcsManager">
@@ -66,25 +69,6 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="MyWailsGo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="MyWailsGo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">

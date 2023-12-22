@@ -6,6 +6,10 @@ export function GetPath() {
   return window['go']['main']['App']['GetPath']();
 }
 
+export function GetSettingsJson() {
+  return window['go']['main']['App']['GetSettingsJson']();
+}
+
 export function SetExportFileUrl() {
   return window['go']['main']['App']['SetExportFileUrl']();
 }
