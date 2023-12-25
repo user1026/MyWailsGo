@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a0eae6-6a85-41ad-991d-a042574ee6a0" name="变更" comment="1">
-      <change afterPath="$PROJECT_DIR$/settings.json" afterDir="false" />
+    <list default="true" id="48a0eae6-6a85-41ad-991d-a042574ee6a0" name="变更" comment="设置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppMenu/FileMenu.go" beforeDir="false" afterPath="$PROJECT_DIR$/AppMenu/FileMenu.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/Global/global.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Settings/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/index.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Global/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Global/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/settings/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="重构目录结构" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="设置" />
+    <option name="LAST_COMMIT_MESSAGE" value="设置" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

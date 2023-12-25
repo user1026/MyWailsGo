@@ -32,9 +32,12 @@ func (a *App) GetPath() string {
 	str, _ := os.Getwd()
 	return str
 }
-func (a *App) GetSettingsJson() Settings.SettingsJson {
+func (a *App) GetSettingsJson() map[string]string {
 	return Settings.ReadSettings()
 }
 func (a *App) SetExportFileType(value string) bool {
 	return Settings.SetExportFileType(value)
+}
+func (a *App) ExportFile(FileType string, data string) bool {
+	return Settings.ExportFile(FileType, data)
 }

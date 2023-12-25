@@ -32,7 +32,7 @@
       </el-form>
     </el-col>
     <el-col :span="12">
-      <el-button type="success">导出</el-button>
+      <el-button @click="Export" type="success">导出</el-button>
     </el-col>
   </el-row>
 </template>
@@ -57,6 +57,9 @@
   import Radiator from "./Radiator/index.vue";
   import HDD from "./HDD/index.vue"
   import FormData from "./index.js";
+  import Global from "../../Global/index.js"
+  import { ExportFile } from "../../../wailsjs/go/main/App.js"
+  import { ElMessage } from 'element-plus'
   // const RadiatorList = ref([]);
   // const CPUList = ref([]);
   // const GPUList = ref([]);
@@ -74,6 +77,15 @@
   onDeactivated(() => {
 
   })
+  const Export=async ()=>{
+         let flag=await ExportFile("txt","1234567890")
+         if(flag){
+          ElMessage({
+            type:"success",
+            message:"导出成功"
+          })
+         }
+  }
 </script>
 <style lang="scss" scoped>
 
