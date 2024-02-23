@@ -39,3 +39,36 @@ export namespace Computer {
 
 }
 
+export namespace Global {
+	
+	export class PCHardwork {
+	    CPU: string;
+	    GPU: string;
+	    MainBoard: string;
+	    RAM: string;
+	    Power: string;
+	    SSD: string[];
+	    HDD: string[];
+	    Chassis: string;
+	    Radiator: string;
+	
+	    static createFrom(source: any = {}) {
+	        return new PCHardwork(source);
+	    }
+	
+	    constructor(source: any = {}) {
+	        if ('string' === typeof source) source = JSON.parse(source);
+	        this.CPU = source["CPU"];
+	        this.GPU = source["GPU"];
+	        this.MainBoard = source["MainBoard"];
+	        this.RAM = source["RAM"];
+	        this.Power = source["Power"];
+	        this.SSD = source["SSD"];
+	        this.HDD = source["HDD"];
+	        this.Chassis = source["Chassis"];
+	        this.Radiator = source["Radiator"];
+	    }
+	}
+
+}
+

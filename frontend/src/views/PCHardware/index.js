@@ -8,6 +8,7 @@
   MainBoard: {},
   HDD: [],
   SSD: [],
-  Radiator: {}
+  Radiator: {},
+  Fan:[]
 })
 export default FormData;
