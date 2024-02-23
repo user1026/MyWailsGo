@@ -1,11 +1,10 @@
 package main
 
 import (
-	"changeme/Computer"
-	"changeme/Global"
+	"MyWailsGo/Global"
+	"MyWailsGo/Settings"
 	"context"
-	"fmt"
-	"github.com/shirou/gopsutil/cpu"
+	"os"
 )
 
 // App struct
@@ -25,25 +24,17 @@ func (a *App) startup(ctx context.Context) {
 	Global.Global_ConText = ctx
 }
 
-// Greet returns a greeting for the given name
-func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time!", name)
+func (a *App) SetExportFileUrl() string {
+	return Settings.SetExportFileUrl()
 }
 
-func (a *App) GetCpuInfo() cpu.InfoStat {
-	return Computer.GetCpuInfo()
+func (a *App) GetPath() string {
+	str, _ := os.Getwd()
+	return str
 }
-
-func (a *App) GetUsingCpuInfo() float64 {
-	return Computer.GetUsingCpuInfo()
+func (a *App) GetSettingsJson() Settings.SettingsJson {
+	return Settings.ReadSettings()
 }
-func (a *App) GetMemInfo() Computer.MemInfo {
-	return Computer.GetMemInfo()
-}
-func (a *App) GetAllInfo() {
-
-}
-
-func openFile(data ...interface{}) {
-
+func (a *App) SetExportFileType(value string) bool {
+	return Settings.SetExportFileType(value)
 }

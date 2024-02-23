@@ -5,28 +5,47 @@
         <el-col :span="leftSpan"> -->
       <el-aside :width="leftWidth">
         <div id="left">
-       
-            <el-icon @click="changeCollapse">
-              <Menu />
-            </el-icon>
-        
           <el-menu
           ref="leftElMenu"
-            default-active="2"
+            :default-active="indexUrl"
             class="leftMenu el-menu-vertical-demo"
-            :collapse="isCollapse"
+            router 
           >
-            <el-menu-item index="1">
-              <el-icon>
-                <document />
+            <el-menu-item :index="indexUrl">
+              <el-icon v-if="activeUrl==indexUrl">
+              <img  src="../assets/images/computer_active.png" alt="" srcset="">
               </el-icon>
-              <template #title>Navigator Three</template>
+              <el-icon v-else>
+                <img  src="../assets/images/computer_noactive2.png" alt="" srcset="">
+                </el-icon> 
+              <template #title>首页简介</template>
             </el-menu-item>
-            <el-menu-item index="2">
-              <el-icon>
-                <document />
+            <el-menu-item :index="PCHardwareUrl">
+              <el-icon v-if="activeUrl==PCHardwareUrl">
+               <img  src="../assets/images/PCHardware_active.png" alt="" srcset="">
               </el-icon>
-              <template #title>Navigator Three</template>
+              <el-icon v-else>
+               <img  src="../assets/images/PCHardware_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>电脑装机</template>
+            </el-menu-item>
+            <el-menu-item :index="ManualUrl">
+              <el-icon v-if="activeUrl==ManualUrl">
+               <img  src="../assets/images/settings_active.png" alt="" srcset="">
+              </el-icon>
+              <el-icon v-else>
+               <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>概念介绍</template>
+            </el-menu-item>
+            <el-menu-item :index="SettingsUrl">
+              <el-icon v-if="activeUrl==SettingsUrl">
+               <img  src="../assets/images/settings_active.png" alt="" srcset="">
+              </el-icon>
+              <el-icon v-else>
+               <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>设置</template>
             </el-menu-item>
           </el-menu>
         </div>
@@ -34,11 +53,10 @@
       <!-- </el-col>
         <el-col :span="rightSpan"> -->
       <el-container>
-        <el-header></el-header>
+        <!-- <el-header></el-header> -->
         <el-main>
           <div id="right">
-            <el-button @click="t">+</el-button>
-            <computer></computer>
+            <router-view></router-view>
           </div>
         </el-main>
       </el-container>
@@ -48,30 +66,22 @@
   </div>
 </template>
 <script setup>
-import { ref, reactive, onMounted } from "vue";
-import {GetCpuInfo,GetUsingCpuInfo,GetMemInfo} from "../../wailsjs/go/main/App.js"
-import computer from "@/views/computer/index.vue"
-const leftSpan = ref(4);
-const rightSpan = ref(20);
-const isCollapse = ref(false);
-const leftElMenu=ref(null)
+import { ref, reactive, onMounted,watch } from "vue";
+import Global from "../Global/index.js"
+const leftElMenu=ref(null);
 const leftWidth = ref("20vh");
-const t = () => {
-  leftSpan.value = 8;
-  rightSpan.value = 16;
-};
-onMounted(()=>{
-    leftWidth.value=leftElMenu.width+"px"
-  //   GetCpuInfo().then(res=>{console.log(res)})
-  // GetUsingCpuInfo().then(res=>{console.log(res,"using")})
-  GetMemInfo().then(res=>{console.log(res,"men")})
+const activeUrl=ref("");
+const indexUrl=ref("/Introduction")
+const PCHardwareUrl=ref("/PCHardware")
+const SettingsUrl=ref("/settings")
+const ManualUrl=ref("/Manual")
+ onMounted(()=>{
 
+ })
+
+watch(()=>Global.activeUrl,(n,o)=>{
+  activeUrl.value=n;
 })
-const changeCollapse = () => {
-  isCollapse.value = !isCollapse.value;
-  // isCollapse.value?leftSpan.value=1:leftSpan.value=4;
-   leftWidth.value=leftElMenu.width+"px";
-};
 </script>
 <style lang="scss" scoped>
 #context {
@@ -83,10 +93,10 @@ const changeCollapse = () => {
 #left {
   
   height: 100vh;
-  background-color: #c6cbd6;
+  background-color: white;
 
   .leftMenu {
-    background-color: #e9ecf3;
+    background-color: white;
     border-right: none;
   }
 }
@@ -94,6 +104,13 @@ const changeCollapse = () => {
 #right {
   width: 100%;
   height: 100vh;
-  background-color: blue;
+  background-color: white;
+}
+.el-main{
+  padding: 0;
+}
+img{
+  width: 20px;
+  height: 20px;
 }
 </style>

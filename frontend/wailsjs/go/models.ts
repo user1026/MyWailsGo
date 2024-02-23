@@ -1,27 +1,6 @@
 export namespace Computer {
 	
-	export class MemInfo {
-	    total: number;
-	    used: number;
-	    usePr: number;
-	
-	    static createFrom(source: any = {}) {
-	        return new MemInfo(source);
-	    }
-	
-	    constructor(source: any = {}) {
-	        if ('string' === typeof source) source = JSON.parse(source);
-	        this.total = source["total"];
-	        this.used = source["used"];
-	        this.usePr = source["usePr"];
-	    }
-	}
-
-}
-
-export namespace cpu {
-	
-	export class InfoStat {
+	export class CPUInfo {
 	    cpu: number;
 	    vendorId: string;
 	    family: string;
@@ -37,7 +16,7 @@ export namespace cpu {
 	    microcode: string;
 	
 	    static createFrom(source: any = {}) {
-	        return new InfoStat(source);
+	        return new CPUInfo(source);
 	    }
 	
 	    constructor(source: any = {}) {

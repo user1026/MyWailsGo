@@ -1,7 +1,12 @@
 <script setup>
 import { onMounted } from 'vue';
-onMounted(() => {
-
+import Global from "./Global/index.js"
+import { GetSettingsJson } from '../wailsjs/go/main/App'
+onMounted(async () => {
+  const settings=await GetSettingsJson()
+  console.log(settings)
+  Global.ExportFileType=settings.ExportFileType
+  Global.ExportFileUrl=settings.ExportFileUrl
 })
 </script>
 

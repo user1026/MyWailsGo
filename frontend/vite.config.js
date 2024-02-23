@@ -31,5 +31,24 @@ export default defineConfig({
       "BASE_URL": "http://localhost:9000"
     }
   },
-  server:{ host: '127.0.0.1', port: 7000 }
+
+  server: {
+    host: '127.0.0.1',
+    port: 7000,
+    proxy: {
+      // 选项写法
+      '^/cc': {
+        target: 'https://zy.xywlapi.cc', // 所要代理的目标地址，也就是后台接口地址
+        rewrite: path =>{
+          console.log(path,"---------");
+         return path.replace(/^\/cc/, '')
+        },
+        changeOrigin: true, // true/false, Default: false - changes the origin of the host header to the target URL
+      },
+        '/ip': {
+          target: "https://api.wrdan.com",
+          changeOrigin: true,
+        }
+      }
+  }
 })
