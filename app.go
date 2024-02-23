@@ -41,3 +41,6 @@ func (a *App) SetExportFileType(value string) bool {
 func (a *App) ExportFile(FileType string, data string) bool {
 	return Settings.ExportFile(FileType, data)
 }
+func (a *App) ExportFile2(FileType string, data Global.PCHardwork) bool {
+	return Settings.ExportFile2(FileType, data)
+}

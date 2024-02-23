@@ -1,9 +1,9 @@
 <template>
-  <el-select v-model="FormData.RAM" clearable placeholder="请选择内存">
-    <el-option v-for="item in RAMList" :key="item.value" :label="item.label" :value="item.value" />
+  <el-select v-model="FormData.Fan" clearable placeholder="请选择内存">
+    <el-option v-for="item in FanList" :key="item.value" :label="item.label" :value="item.value" />
   </el-select>
-  <el-input  v-model="FormData.RAM.Num"></el-input>
-  <template v-if="FormData.RAM.Name">
+  <el-input  v-model="FormData.Fan.Num"></el-input>
+  <template v-if="FormData.Fan.Name">
     <el-tooltip  class="box-item" effect="light" placement="right">
       <template #content>
         <Descriptions />
@@ -18,13 +18,13 @@
 import {ref} from "vue"
 import FormData from "../index.js"
 import Descriptions from "@/components/Descriptions.vue"
-const RAMList = ref([]);
-const RAMInfo=ref([
-  {label:"内存型号",val:"",key:"Name"},
-  {label:"内存容量",val:"",key:"Total"},
-  {label:"时序",val:"",key:"CL"},
-  {label:"频率",val:"",key:"MHZ"},
-  {label:"颗粒",val:"",key:"Type"},
+const FanList = ref([]);
+const FanInfo=ref([
+  {label:"风扇名",val:"",key:"Name"},
+  {label:"转速",val:"",key:"Total"},
+  {label:"神光同步",val:"",key:"CL"},
+  {label:"支持RGB",val:"",key:"SupportRGB"},
+  {label:"规格",val:"",key:"Type"},
   {label:"首发价格",val:"",key:"Price"},
   {label:"图片",val:"",key:"ImgUrl"},
   {label:"上市日期",val:"",key:"CreateTime"},

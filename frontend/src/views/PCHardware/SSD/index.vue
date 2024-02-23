@@ -35,6 +35,7 @@ const SSDInfo=ref([
   {label:"规格",val:"",key:""},
   {label:"顺序读写",val:"",key:""},
   {label:"随机读写",val:"",key:""},
+  {label:"读写速度",val:"",key:""}
 ])
 const addSSD=()=>{
     if(n==3){

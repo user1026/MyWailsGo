@@ -6,6 +6,10 @@ export function ExportFile(arg1, arg2) {
   return window['go']['main']['App']['ExportFile'](arg1, arg2);
 }
 
+export function ExportFile2(arg1, arg2) {
+  return window['go']['main']['App']['ExportFile2'](arg1, arg2);
+}
+
 export function GetPath() {
   return window['go']['main']['App']['GetPath']();
 }
