@@ -69,12 +69,10 @@ github.com/valyala/bytebufferpool v1.0.0/go.mod h1:6bBcMArwyJ5K/AmCkWv1jt77kVWyC
 github.com/valyala/fasttemplate v1.2.1/go.mod h1:KHLXt3tVN2HBp8eijSv/kGJopbvo7S+qRAEEKiv+SiQ=
 github.com/valyala/fasttemplate v1.2.2 h1:lxLXG0uE3Qnshl9QyaK6XJxMXlQZELvChBOCmQD0Loo=
 github.com/valyala/fasttemplate v1.2.2/go.mod h1:KHLXt3tVN2HBp8eijSv/kGJopbvo7S+qRAEEKiv+SiQ=
-github.com/wailsapp/go-webview2 v1.0.8 h1:hyoFPlMSfb/NM64wuVbgBaq1MASJjqsSUYhN+Rbcr9Y=
-github.com/wailsapp/go-webview2 v1.0.8/go.mod h1:Uk2BePfCRzttBBjFrBmqKGJd41P6QIHeV9kTgIeOZNo=
 github.com/wailsapp/mimetype v1.4.1 h1:pQN9ycO7uo4vsUUuPeHEYoUkLVkaRntMnHJxVwYhwHs=
 github.com/wailsapp/mimetype v1.4.1/go.mod h1:9aV5k31bBOv5z6u+QP8TltzvNGJPmNJD4XlAL3U+j3o=
-github.com/wailsapp/wails/v2 v2.6.0 h1:EyH0zR/EO6dDiqNy8qU5spaXDfkluiq77xrkabPYD4c=
-github.com/wailsapp/wails/v2 v2.6.0/go.mod h1:WBG9KKWuw0FKfoepBrr/vRlyTmHaMibWesK3yz6nNiM=
+github.com/wailsapp/wails/v2 v2.4.1 h1:Ns7MOKWQM6l0ttBxpd5VcgYrH+GNPOnoDfnsBpbDnzM=
+github.com/wailsapp/wails/v2 v2.4.1/go.mod h1:jbOZbcr/zm79PxXxAjP8UoVlDd9wLW3uDs+isIthDfs=
 github.com/xuri/efp v0.0.0-20230802181842-ad255f2331ca h1:uvPMDVyP7PXMMioYdyPH+0O+Ta/UO1WFfNYMO3Wz0eg=
 github.com/xuri/efp v0.0.0-20230802181842-ad255f2331ca/go.mod h1:ybY/Jr0T0GTCnYjKqmdwxyxn2BQf2RcQIIvex5QldPI=
 github.com/xuri/excelize/v2 v2.8.0 h1:Vd4Qy809fupgp1v7X+nCS/MioeQmYVVzi495UCTqB7U=

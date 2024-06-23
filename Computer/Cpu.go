@@ -25,7 +25,7 @@ type CPU struct {
 	//核心数
 	Cores int
 	//芯片组型号
-	CPUInterface string
+	Interface string
 	//线程数
 	Threads int
 	//大核频率
@@ -35,7 +35,7 @@ type CPU struct {
 	//频率
 	Ghz string
 	//功耗
-	CPUPower string
+	Power string
 	//上市时间
 	CreateTime string
 	//首发价格
@@ -56,20 +56,24 @@ func NewCPU() *CPU {
 // @return cpu.InfoStat
 func (c *CPU) GetCpuInfo() CPUInfo {
 	var CpuInfo CPUInfo
-	CpuInfo.Cores, _ = cpu.Counts(false)
-	CpuInfo.Threads, _ = cpu.Counts(true)
 	cpuInfo, _ := cpu.Info()
-	fmt.Println(cpuInfo, "-------")
+	Cores, _ := cpu.Counts(false)
+	Threads, _ := cpu.Counts(true)
 	CpuInfo.Name, CpuInfo.Mhz = cpuInfo[0].ModelName, cpuInfo[0].Mhz
 	CpuInfo.GHZ = fmt.Sprintf("%.1f", CpuInfo.Mhz/1000)
-	return CpuInfo
+	return CPUInfo{
+		Cores:   Cores,
+		Threads: Threads,
+		Name:    cpuInfo[0].ModelName,
+		GHZ:     fmt.Sprintf("%.1f", cpuInfo[0].Mhz/1000),
+	}
 }
 
 // GetUsingCpuInfo
 // @Description: 获取CPU运行时的信息
 // @return float64
 func (c *CPU) GetUsingCpuInfo() float64 {
-	useInfo, _ := cpu.Percent(1*time.Second, false)
+	useInfo, _ := cpu.Percent(5*time.Second, false)
 	fmt.Println(useInfo, "useInfo")
 	return useInfo[0]
 }

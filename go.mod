@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/shirou/gopsutil v2.21.11+incompatible
-	github.com/wailsapp/wails/v2 v2.6.0
+	github.com/wailsapp/wails/v2 v2.4.1
 	github.com/xuri/excelize/v2 v2.8.0
 )
 
@@ -32,7 +32,6 @@ require (
 	github.com/tkrajina/go-reflector v0.5.6 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
-	github.com/wailsapp/go-webview2 v1.0.8 // indirect
 	github.com/wailsapp/mimetype v1.4.1 // indirect
 	github.com/xuri/efp v0.0.0-20230802181842-ad255f2331ca // indirect
 	github.com/xuri/nfp v0.0.0-20230919160717-d98342af3f05 // indirect

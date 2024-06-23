@@ -4,19 +4,48 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a0eae6-6a85-41ad-991d-a042574ee6a0" name="变更" comment="设置">
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/Fan/index.vue" afterDir="false" />
+    <list default="true" id="b8917fec-80f6-4653-8f66-4210bc86ca42" name="变更" comment="添加图表相关">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/danger.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/json/CPU.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/json/GPU.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/json/mainBoard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/Pay/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/Warning/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/Global/global.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Settings/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/index.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/RAM/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/RAM/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/SSD/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/SSD/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/PCHardware/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer/Cpu.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/Cpu.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer/RAM.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/RAM.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer/SSD.go" beforeDir="false" afterPath="$PROJECT_DIR$/Computer/SSD.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json.md5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pinia/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/check.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/CPU.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/CPU.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/CPU.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/CPU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Chassis.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Chassis.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Chassis.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Chassis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/GPU.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/GPU.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/GPU.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/GPU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/HDD.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/HDD.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/HDD.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/HDD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/MainBoard.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/MainBoard.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/MainBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Power.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Power.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Power.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Power.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/RAM.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/RAM.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/RAM.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/RAM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Radiator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Radiator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Radiator.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/Radiator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/SSD.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/SSD.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/SSD.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/Computer/SSD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/main/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://E:/GO" />
+  <component name="GOROOT" url="file://G:/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -52,7 +81,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2VPklG3A2vpgQ3ZrTSs8aAVoHX2" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -73,29 +102,10 @@
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../win" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.autoimport" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="MyWailsGo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="MyWailsGo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">

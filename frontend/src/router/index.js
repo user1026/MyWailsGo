@@ -24,6 +24,14 @@ const routes=[
             {
                 path:"Settings",
                 component:()=>import("@/views/settings/index.vue")
+            },
+            {
+                path:"Warning",
+                component:()=>import("@/views/Warning/index.vue")
+            },
+            {
+                path:"Pay",
+                component:()=>import("@/views/Pay/index.vue")
             }
         ]
     }

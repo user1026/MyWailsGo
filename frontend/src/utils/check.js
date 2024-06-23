@@ -32,7 +32,7 @@ export const CheckAll = (Form) => {
   }
   if(CheckNull(RAM.value.Type)&&CheckNull(MainBoard.value.SupportRAMType)){
     if(RAM.value.Type!==MainBoard.value.SupportRAMType){
-      message.push(`主板不支持该类型的内存条,主板支持${MainBoard.value.SupportRAMType}类型，内存条为${RAM.value.Type}类型`)
+      message.push(`主板不支持该类型的内存条,所选主板支持${MainBoard.value.SupportRAMType}类型，所选内存条为${RAM.value.Type}类型`)
     }
   }
   if(CheckNull(Chassis.value.SupportPowerTypes)&&CheckNull(Power.value.Type)){
@@ -45,16 +45,16 @@ export const CheckAll = (Form) => {
         message.push(`所选显卡长度超过了所选机箱支持的显卡长度`)
     }
   }
-  if(CheckNull()&&CheckNull()){
-    if(1){
+  // if(CheckNull()&&CheckNull()){
+  //   if(1){
 
-    } 
-  }
-  if(CheckNull()&&CheckNull()){
-    if(1){
+  //   } 
+  // }
+  // if(CheckNull()&&CheckNull()){
+  //   if(1){
 
-    }
-  }
+  //   }
+  // }
 };
 
 const CheckNull = (x) => {

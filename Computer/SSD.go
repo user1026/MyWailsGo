@@ -5,16 +5,22 @@ type SSD struct {
 	Name string
 	//容量
 	CAP string
-	//颗粒类型
-	Type string
-	//硬盘长度
-	Length string
-	//接口类型
-	InterfaceType string
+	//闪存颗粒
+	Flash string
+	//芯片颗粒
+	Chip string
+	//硬盘规格
+	Model string
+	//寿命
+	Life string
 	//图片地址
 	ImgUrl string
 	//接口
 	Interface string
+	//读写速度
+	RWSpeed string
+	//缓存大小
+	Cache string
 }
 
 // NewSSD

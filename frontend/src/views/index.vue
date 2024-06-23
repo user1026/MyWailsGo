@@ -20,15 +20,6 @@
                 </el-icon> 
               <template #title>首页简介</template>
             </el-menu-item>
-            <el-menu-item :index="PCHardwareUrl">
-              <el-icon v-if="activeUrl==PCHardwareUrl">
-               <img  src="../assets/images/PCHardware_active.png" alt="" srcset="">
-              </el-icon>
-              <el-icon v-else>
-               <img  src="../assets/images/PCHardware_noactive.png" alt="" srcset="">
-              </el-icon>
-              <template #title>电脑装机</template>
-            </el-menu-item>
             <el-menu-item :index="ManualUrl">
               <el-icon v-if="activeUrl==ManualUrl">
                <img  src="../assets/images/settings_active.png" alt="" srcset="">
@@ -37,6 +28,33 @@
                <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
               </el-icon>
               <template #title>概念介绍</template>
+            </el-menu-item>
+            <el-menu-item :index="PCHardwareUrl">
+              <el-icon v-if="activeUrl==PCHardwareUrl">
+               <img  src="../assets/images/PCHardware_active.png" alt="" srcset="">
+              </el-icon>
+              <el-icon v-else>
+               <img  src="../assets/images/PCHardware_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>配件挑选</template>
+            </el-menu-item>
+            <el-menu-item :index="PayUrl">
+              <el-icon v-if="activeUrl==PayUrl">
+               <img  src="../assets/images/settings_active.png" alt="" srcset="">
+              </el-icon>
+              <el-icon v-else>
+               <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>购买和到货事项</template>
+            </el-menu-item>
+            <el-menu-item :index="WarningUrl">
+              <el-icon v-if="activeUrl==WarningUrl">
+               <img  src="../assets/images/settings_active.png" alt="" srcset="">
+              </el-icon>
+              <el-icon v-else>
+               <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>装机事项</template>
             </el-menu-item>
             <el-menu-item :index="SettingsUrl">
               <el-icon v-if="activeUrl==SettingsUrl">
@@ -75,6 +93,8 @@ const indexUrl=ref("/Introduction")
 const PCHardwareUrl=ref("/PCHardware")
 const SettingsUrl=ref("/settings")
 const ManualUrl=ref("/Manual")
+const WarningUrl=ref("/Warning")
+const PayUrl=ref("/Pay")
  onMounted(()=>{
 
  })
