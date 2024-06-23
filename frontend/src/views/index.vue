@@ -22,10 +22,10 @@
             </el-menu-item>
             <el-menu-item :index="ManualUrl">
               <el-icon v-if="activeUrl==ManualUrl">
-               <img  src="../assets/images/settings_active.png" alt="" srcset="">
+               <img  src="../assets/images/jieshao_active.png" alt="" srcset="">
               </el-icon>
               <el-icon v-else>
-               <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
+               <img  src="../assets/images/jieshao_noactive.png" alt="" srcset="">
               </el-icon>
               <template #title>概念介绍</template>
             </el-menu-item>
@@ -40,19 +40,28 @@
             </el-menu-item>
             <el-menu-item :index="PayUrl">
               <el-icon v-if="activeUrl==PayUrl">
-               <img  src="../assets/images/settings_active.png" alt="" srcset="">
+               <img  src="../assets/images/pay_active.png" alt="" srcset="">
               </el-icon>
               <el-icon v-else>
-               <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
+               <img  src="../assets/images/pay_noactive.png" alt="" srcset="">
               </el-icon>
-              <template #title>购买和到货事项</template>
+              <template #title>购买</template>
+            </el-menu-item>
+            <el-menu-item :index="ArrivalUrl">
+              <el-icon v-if="activeUrl==ArrivalUrl">
+                <img  src="../assets/images/pay_active.png" alt="" srcset="">
+              </el-icon>
+              <el-icon v-else>
+               <img  src="../assets/images/pay_noactive.png" alt="" srcset="">
+              </el-icon>
+              <template #title>到货事项</template>
             </el-menu-item>
             <el-menu-item :index="WarningUrl">
               <el-icon v-if="activeUrl==WarningUrl">
-               <img  src="../assets/images/settings_active.png" alt="" srcset="">
+               <img  src="../assets/images/warning_active.png" alt="" srcset="">
               </el-icon>
               <el-icon v-else>
-               <img  src="../assets/images/settings_noactive.png" alt="" srcset="">
+               <img  src="../assets/images/warning_noactive.png" alt="" srcset="">
               </el-icon>
               <template #title>装机事项</template>
             </el-menu-item>
@@ -94,6 +103,7 @@ const PCHardwareUrl=ref("/PCHardware")
 const SettingsUrl=ref("/settings")
 const ManualUrl=ref("/Manual")
 const WarningUrl=ref("/Warning")
+const ArrivalUrl=ref("/Arrival")
 const PayUrl=ref("/Pay")
  onMounted(()=>{
 

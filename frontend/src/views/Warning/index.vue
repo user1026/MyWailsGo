@@ -53,7 +53,7 @@
 
 </script>
 <style scoped>
-  .descriptions {}
+
   .warning{
     font-size: large;
     color: red;

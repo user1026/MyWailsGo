@@ -7,7 +7,7 @@
         <template #label>
           <el-tag size="large">贴吧整理的奸商店铺</el-tag>
         </template>
-        <el-image style="width: 500px; height: 300px" fit="fill" :src="imgUrl" />
+        <el-image   :preview-src-list="[imgUrl]"  :initial-index="4" style="width: 500px; height: 300px" fit="fill" :src="imgUrl" />
       </el-descriptions-item>
     </el-descriptions>
     <div class="bottom">
@@ -18,9 +18,12 @@
 <script setup>
 import {ref} from "vue"
 import imgUrl from "@/assets/images/danger.jpg"
+const bigImg = () => {
+  
+}
 </script>
 <style scoped>
-  .descriptions {}
+
 
   .bottom {
     height: 90px;
