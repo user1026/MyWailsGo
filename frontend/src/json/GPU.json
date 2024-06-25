@@ -1,6 +1,22 @@
 {
-  "Name":"GPU",
-  "List":[
-
+  "Name": "GPU",
+  "List": [
+    {
+      "Name": "",
+      "Model": "",
+      "ImgUrl": "",
+      "GPUPower": "",
+      "CreateTime": "",
+      "Price": 0.1,
+      "Bit": 0,
+      "RAM": 0,
+      "RAMGhz": "",
+      "OEM": "",
+      "RAMType": "",
+      "LCPUNumber": 0,
+      "Length": "",
+      "Width": "",
+      "Height": ""
+    }
   ]
 }

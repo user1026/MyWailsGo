@@ -2,7 +2,7 @@ module MyWailsGo
 
 go 1.21
 
-toolchain go1.21.5
+
 
 require (
 	github.com/shirou/gopsutil v2.21.11+incompatible
